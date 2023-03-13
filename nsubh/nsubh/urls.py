@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from homepage import views
+
 urlpatterns = [
     path('', views.homepage, name='homepage'),
     path('homepage/', include('homepage.urls')),
+    path('buildingselection/', include('buildingselection.urls')),
+    path('thecommonsrs', include('thecommonsRS.urls')),
     path('admin/', admin.site.urls),
 ]
