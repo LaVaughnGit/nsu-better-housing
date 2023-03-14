@@ -1,175 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
+    body {
+        background: #003893 url("https://risere.com/wp-content/uploads/2018/08/Nova-Southeastern-121.jpg") no-repeat center center fixed;
+        webkit-background-size: cover;
+        background-size: cover;
+        font-size: .9em;
+        font: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
 
-body {
-    background: #003893 url("https://risere.com/wp-content/uploads/2018/08/Nova-Southeastern-121.jpg") no-repeat center center fixed;
-    webkit-background-size: cover;
-    background-size: cover;
-    font-size: .9em;
-    font: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+    .credentials {
+        background-color: transparent;
+        border-radius: 0px;
+        margin-top: 0;
+        padding: 0px;
+    }
 
-.credentials{
-    background-color: transparent;
-    border-radius: 0px;
-    margin-top: 0;
-    padding: 0px;
-}
+    #login,
+    .contentBox {
+        margin-top: 10vh !important;
+        margin-bottom: 100px !important;
+        max-width: 350px;
+        height: auto;
+        display: inline-block;
+        padding: 1em;
+        background: #000099;
+        background: rgba(0, 0, 153, 0.85);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        position: absolute;
+        right: 6%;
+    }
 
-#login, .contentBox {
-    margin-top: 10vh!important;
-    margin-bottom: 100px!important;
-    max-width: 350px;
-    height: auto;
-    display: inline-block;
-    padding: 1em;
-    background: #000099;
-    background: rgba(0, 0, 153, 0.85);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    position: absolute;
-    right: 6%;
-}
-login, .contentBox {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%!important;
-    margin-bottom: 2%!important;
-}
+    login,
+    .contentBox {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2% !important;
+        margin-bottom: 2% !important;
+    }
 
-#footer {
-    margin-top: 27px;
-    color: #fff;
-    /* text-align: center; */
-    font-weight: normal;
-}
+    #footer {
+        margin-top: 27px;
+        color: #fff;
+        /* text-align: center; */
+        font-weight: normal;
+    }
 
-form {
-    display: block;
-    margin-top: 0em;
-    margin-block-end: 1em;
-}
+    form {
+        display: block;
+        margin-top: 0em;
+        margin-block-end: 1em;
+    }
 
-.credentials .btn {
-    font-weight: bold;
-    background: #687379;
-    color: white;
-    text-transform: uppercase;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    word-spacing: 4px;
-}
+    .credentials .btn {
+        font-weight: bold;
+        background: #687379;
+        color: white;
+        text-transform: uppercase;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        word-spacing: 4px;
+    }
 
-.btn-block {
-    display: block;
-    width: 100%;
-}
+    .btn-block {
+        display: block;
+        width: 100%;
+    }
 
-.btn {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
 
-button, input, optgroup, select, textarea {
-    margin: 0;
-    font: inherit;
-    color: inherit;
-}
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        margin: 0;
+        font: inherit;
+        color: inherit;
+    }
 
-.credentials img {
-    display: block;
-    height: auto;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 260px;
-}
-.alert {
-    margin-bottom: 8px;
-}
-.alert-danger {
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;
-}
-.alert {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-#footer a {
-    color: #fff;
-}
+    .credentials img {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 260px;
+    }
 
-a {
-    color: #337ab7;
-    text-decoration: none;
-}
+    .alert {
+        margin-bottom: 8px;
+    }
 
-form input[type="text"], form input[type="password"] {
-    width: 95%;
-    height: 50px;
-    padding-left: 15px;
-    font-size: 1.2em;
-    color: #666D70;
-    border: 1px solid #666D70;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-box-shadow: 0px 0px 1px #666d70;
-    box-shadow: 0px 0px 1px #666d70;
-}
+    .alert-danger {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
 
-form input {
-    margin-bottom: 8px;
-    display: block;
-}
+    .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
 
+    #footer a {
+        color: #fff;
+    }
+
+    a {
+        color: #337ab7;
+        text-decoration: none;
+    }
+
+    form input[type="text"],
+    form input[type="password"] {
+        width: 95%;
+        height: 50px;
+        padding-left: 15px;
+        font-size: 1.2em;
+        color: #666D70;
+        border: 1px solid #666D70;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-box-shadow: 0px 0px 1px #666d70;
+        box-shadow: 0px 0px 1px #666d70;
+    }
+
+    form input {
+        margin-bottom: 8px;
+        display: block;
+    }
 </style>
+
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>NSUBH Login</title>
 </head>
+
 <body>
 
-<div id="login">
-    <div class="credentials">
-    <img src="https://eis.nova.edu/authenticationendpoint/nsu/nsu-logo.png" alt="Nova Southeastern University">
-    <div class="stripe"></div>
-<form action="../commonauth" method="post" id="loginForm" class="form-inline">
-    <div class="alert alert-danger" id="error-msg">Login failed! Please recheck the username and password and try again.
-    </div>
-    <div class="form-group">
-        <input id="username" name="username" type="text" class="form-control" tabindex="0" placeholder="Username">
-    </div>
-    <div class="form-group">
-        <input id="password" name="password" type="password" class="form-control" placeholder="Password" autocomplete="off">
-    </div>
-    <div class="form-group">
-        <input type="hidden" name="sessionDataKey" value="01d87362-6e93-4c32-9db2-4e6ab2c42868">
-    </div>
+    <div id="login">
+        <div class="credentials">
+            <img src="https://eis.nova.edu/authenticationendpoint/nsu/nsu-logo.png" alt="Nova Southeastern University">
+            <div class="stripe"></div>
+            <form action="../commonauth" method="post" id="loginForm" class="form-inline">
+                <div class="alert alert-danger" id="error-msg">Login failed! Please recheck the username and password
+                    and try again.
+                </div>
+                <div class="form-group">
+                    <input id="username" name="username" type="text" class="form-control" tabindex="0"
+                        placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input id="password" name="password" type="password" class="form-control" placeholder="Password"
+                        autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="sessionDataKey" value="01d87362-6e93-4c32-9db2-4e6ab2c42868">
+                </div>
 
-    <!--<div class="form-group">
+                <!--<div class="form-group">
         <div class="checkbox hidden">
             <label>
                 <input type="checkbox" id="chkRemember" name="chkRemember">
@@ -178,42 +193,54 @@ form input {
         </div>
     </div>-->
 
-        <div class="form-actions">
-            <button id="submitform" class="btn btn-default btn-block" type="submit">
-                    <!-- Sign In -->
-                    Log In
-            </button>
-            <input disabled="disabled" value="Authenticating" class="btn btn-default btn-block" style="display:none" tabindex="3" id="dummybutton" type="button">
+                <div class="form-actions">
+                    <button id="submitform" class="btn btn-default btn-block" type="submit">
+                        <!-- Sign In -->
+                        Log In
+                    </button>
+                    <input disabled="disabled" value="Authenticating" class="btn btn-default btn-block"
+                        style="display:none" tabindex="3" id="dummybutton" type="button">
 
+                </div>
+            </form>
         </div>
-    </form></div>
-    <div id="footer">
+        <div id="footer">
 
-<p><span id="iphone"></span>Check out our mobile app, <a href="http://www.nova.edu/ishark/index.html" target="_blank">iShark</a>.</p>
-<p><a href="http://www.nova.edu/sharklinkid/index.html" target="_blank">Forgot Username</a><br>
-<a href="https://reset.nova.edu/#/" target="_blank">Reset Password</a> / <a href="https://adfs.nova.edu/adfs/portal/updatepassword" target="_blank">Change Password</a><br>
-    <a href="http://www.nova.edu/sharklinkid/index.html" target="_blank">Register Account</a>
-</p>
-<p>..OCI.. When finished in application, remember to logout and close your Web browser.</p>
-<div id="downtime">
-
-
-
-    <ul>
-<li class="h4">SYSTEM NOTIFICATIONS
-<ul>
-<li class="down"><a href="https://www.nova.edu/downtime/index.html#sharklink" target="_blank">Sharklink Migration to Oracle Cloud Infrastructure</a></li><li class="down" style="padding-left:0px"><a href="https://www.nova.edu/portal/oiit/client-support-services.html" target="_blank">OIIT Centralized Support Model for CSS Staff</a></li><li><a class="btn btn-block" href="https://www.nova.edu/downtime/index.html" role="button" target="_blank">VIEW ALL NOTIFICATIONS</a></li></ul>
-</li>
-</ul>
+            <p><span id="iphone"></span>Check out our mobile app, <a href="http://www.nova.edu/ishark/index.html"
+                    target="_blank">iShark</a>.</p>
+            <p><a href="http://www.nova.edu/sharklinkid/index.html" target="_blank">Forgot Username</a><br>
+                <a href="https://reset.nova.edu/#/" target="_blank">Reset Password</a> / <a
+                    href="https://adfs.nova.edu/adfs/portal/updatepassword" target="_blank">Change Password</a><br>
+                <a href="http://www.nova.edu/sharklinkid/index.html" target="_blank">Register Account</a>
+            </p>
+            <p>..OCI.. When finished in application, remember to logout and close your Web browser.</p>
+            <div id="downtime">
 
 
 
+                <ul>
+                    <li class="h4">SYSTEM NOTIFICATIONS
+                        <ul>
+                            <li class="down"><a href="https://www.nova.edu/downtime/index.html#sharklink"
+                                    target="_blank">Sharklink Migration to Oracle Cloud Infrastructure</a></li>
+                            <li class="down" style="padding-left:0px"><a
+                                    href="https://www.nova.edu/portal/oiit/client-support-services.html"
+                                    target="_blank">OIIT Centralized Support Model for CSS Staff</a></li>
+                            <li><a class="btn btn-block" href="https://www.nova.edu/downtime/index.html" role="button"
+                                    target="_blank">VIEW ALL NOTIFICATIONS</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
 
-</div>
-<!--<div id="footerlogo"></div>-->
-</div>
-</div>
+
+
+
+            </div>
+            <!--<div id="footerlogo"></div>-->
+        </div>
+    </div>
 
 </body>
+
 </html>

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'buildingselection',
     'thecommonsRS',
     'loginpage',
+    'registrationpage',
 ]
 
 MIDDLEWARE = [
