@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+</head>
 <style>
-
-body {
-    background: #003893 url("https://risere.com/wp-content/uploads/2018/08/Nova-Southeastern-121.jpg") no-repeat center center fixed;
+  body {
+    background: #003893 url("https://pbs.twimg.com/media/FUvzkIWWAAAlVvN.jpg:large") no-repeat center center fixed;
     webkit-background-size: cover;
     background-size: cover;
     font-size: .9em;
     font: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
-.credentials{
-    background-color: transparent;
-    border-radius: 0px;
-    margin-top: 0;
-    padding: 0px;
-}
-
 #login, .contentBox {
-    margin-top: 10vh!important;
-    margin-bottom: 100px!important;
-    max-width: 350px;
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
     height: auto;
-    display: inline-block;
     padding: 1em;
     background: #000099;
     background: rgba(0, 0, 153, 0.85);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    position: absolute;
-    right: 6%;
 }
-login, .contentBox {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%!important;
-    margin-bottom: 2%!important;
-}
-
-#footer {
-    margin-top: 27px;
-    color: #fff;
-    /* text-align: center; */
-    font-weight: normal;
+form input[type="text"], form input[type="password"] {
+    width: 97%;
+    height: 30px;
+    padding-left: 15px;
+    font-size: 1.2em;
+    color: #666D70;
+    border: 1px solid #666D70;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 1px #666d70;
+    box-shadow: 0px 0px 1px #666d70;
 }
 
-form {
+form input {
+    margin-bottom: 8px;
     display: block;
-    margin-top: 0em;
-    margin-block-end: 1em;
 }
 
+#footer a {
+    color: #fff;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+select{
+    margin-bottom:8px;
+    width:100%;
+}
 .credentials .btn {
     font-weight: bold;
     background: #687379;
@@ -91,18 +95,10 @@ form {
 }
 
 button, input, optgroup, select, textarea {
-    margin: 0;
     font: inherit;
     color: inherit;
 }
 
-.credentials img {
-    display: block;
-    height: auto;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 260px;
-}
 .alert {
     margin-bottom: 8px;
 }
@@ -111,53 +107,38 @@ button, input, optgroup, select, textarea {
     background-color: #f2dede;
     border-color: #ebccd1;
 }
+.alert-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+}
 .alert {
     padding: 15px;
     margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 4px;
-}
-#footer a {
-    color: #fff;
-}
 
-a {
-    color: #337ab7;
-    text-decoration: none;
 }
-
-form input[type="text"], form input[type="password"] {
-    width: 95%;
-    height: 50px;
-    padding-left: 15px;
-    font-size: 1.2em;
-    color: #666D70;
-    border: 1px solid #666D70;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-box-shadow: 0px 0px 1px #666d70;
-    box-shadow: 0px 0px 1px #666d70;
-}
-
-form input {
-    margin-bottom: 8px;
+.credentials img {
     display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 260px;
 }
-
 </style>
-<head>
-    <meta charset="UTF-8">
-    <title>Homepage</title>
-</head>
 <body>
-
 <div id="login">
     <div class="credentials">
     <img src="https://eis.nova.edu/authenticationendpoint/nsu/nsu-logo.png" alt="Nova Southeastern University">
     <div class="stripe"></div>
 <form action="../commonauth" method="post" id="loginForm" class="form-inline">
-    <div class="alert alert-danger" id="error-msg">Login failed! Please recheck the username and password and try again.
+    <div class="alert alert-danger" id="error-msg">Registration failed! Please recheck the length of the password and the email and try again.
     </div>
     <div class="form-group">
         <input id="username" name="username" type="text" class="form-control" tabindex="0" placeholder="Username">
@@ -168,7 +149,14 @@ form input {
     <div class="form-group">
         <input type="hidden" name="sessionDataKey" value="01d87362-6e93-4c32-9db2-4e6ab2c42868">
     </div>
-
+  <select id="year" class="select-inline">
+      <option value="" disabled selected>Current Year</option>
+    <option value="1">First Year</option>
+    <option value="2">Second Year</option>
+    <option value="3">Third Year</option>
+    <option value="4">Fourth Year</option>
+      <option value="other">Other???</option>
+  </select>
     <!--<div class="form-group">
         <div class="checkbox hidden">
             <label>
@@ -180,36 +168,21 @@ form input {
 
         <div class="form-actions">
             <button id="submitform" class="btn btn-default btn-block" type="submit">
-                    <!-- Sign In -->
-                    Log In
+                    <!-- Log In -->
+                    Register
             </button>
             <input disabled="disabled" value="Authenticating" class="btn btn-default btn-block" style="display:none" tabindex="3" id="dummybutton" type="button">
 
         </div>
     </form></div>
     <div id="footer">
-
-<p><span id="iphone"></span>Check out our mobile app, <a href="http://www.nova.edu/ishark/index.html" target="_blank">iShark</a>.</p>
-<p><a href="http://www.nova.edu/sharklinkid/index.html" target="_blank">Forgot Username</a><br>
-<a href="https://reset.nova.edu/#/" target="_blank">Reset Password</a> / <a href="https://adfs.nova.edu/adfs/portal/updatepassword" target="_blank">Change Password</a><br>
-    <a href="http://www.nova.edu/sharklinkid/index.html" target="_blank">Register Account</a>
-</p>
-<p>..OCI.. When finished in application, remember to logout and close your Web browser.</p>
-<div id="downtime">
-
-
-
-    <ul>
-<li class="h4">SYSTEM NOTIFICATIONS
-<ul>
-<li class="down"><a href="https://www.nova.edu/downtime/index.html#sharklink" target="_blank">Sharklink Migration to Oracle Cloud Infrastructure</a></li><li class="down" style="padding-left:0px"><a href="https://www.nova.edu/portal/oiit/client-support-services.html" target="_blank">OIIT Centralized Support Model for CSS Staff</a></li><li><a class="btn btn-block" href="https://www.nova.edu/downtime/index.html" role="button" target="_blank">VIEW ALL NOTIFICATIONS</a></li></ul>
-</li>
-</ul>
-
-
-
-
-
+        <div class="alert-error" id="error-msg">
+          <h3>Password must contain the following:</h3>
+          <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+          <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+          <p id="number" class="invalid">A <b>number</b></p>
+          <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+        </div>
 </div>
 <!--<div id="footerlogo"></div>-->
 </div>
