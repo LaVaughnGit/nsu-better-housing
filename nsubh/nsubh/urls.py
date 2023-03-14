@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from homepage import views
+from loginpage import views
 
 urlpatterns = [
-    path('', views.homepage, name='homepage'),
+    path('', views.loginpage, name='loginpage'),
     path('homepage/', include('homepage.urls')),
     path('buildingselection/', include('buildingselection.urls')),
     path('thecommonsrs', include('thecommonsRS.urls')),
