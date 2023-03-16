@@ -147,13 +147,14 @@
         max-width: 260px;
     }
 </style>
+{% block content %}
 
 <body>
     <div id="login">
         <div class="credentials">
             <img src="https://eis.nova.edu/authenticationendpoint/nsu/nsu-logo.png" alt="Nova Southeastern University">
             <div class="stripe"></div>
-            <form action="../loginpage/" method="post" id="loginForm" class="form-inline">
+            <form method="post" id="loginForm" class="form-inline">
                 {% csrf_token %}
                 <div class="alert alert-danger" id="error-msg">Registration failed! Please recheck the length of the
                     password and the email and try again.
@@ -196,6 +197,7 @@
 
                 </div>
             </form>
+            {% endblock %}
         </div>
         <div id="footer">
             <div class="alert-error" id="error-msg">

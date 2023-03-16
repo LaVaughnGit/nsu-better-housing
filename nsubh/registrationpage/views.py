@@ -1,6 +1,6 @@
 import datetime
 import dbm
-from django.shortcuts import redirect
+from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from pymongo import MongoClient
@@ -9,17 +9,17 @@ from django.views.decorators.csrf import csrf_exempt
 
 # Initializing Database
 USERNAME = ''
-client = MongoClient('mongodb://localhost:27017')
-NSUBH = client['NSUBH']
+client = MongoClient("mongodb://localhost:27017")
+nsubh = client["NSUBH"]
 
 
 @csrf_exempt
 def register(request):
-    registerPage = loader.get_template('registrationpage.html')
     if request.method == 'POST':
-        username = request.form['usernmae']
-        password = request.form['password']
-        year = request.form['year']
+        print('WORKING')
+        username = request.POST['username']
+        password = request.POST['password']
+        year = request.POST.get('year', False)
         error = None
 
         if not username:
@@ -29,18 +29,23 @@ def register(request):
 
         if error is None:
             try:
-                logincollection = NSUBH['Login']
+                # print('working')
+                logincollection = nsubh["Login"]
                 USERNAME = username
+                print(f"{username}, {password}, {year}")
                 information = {
                     "Username:": username,
                     "Password": password,
                     "Year": year,
-                    "Date Created": datetime.datetime.utcnow
+                    "Date Created": datetime.datetime.utcnow()
                 }
-                document = logincollection.insert_one(information).inserted_id
-            except dbm.IntegrityError:
-                error = f"User {username} is already registered."
+                print('working')
+                logininfo = logincollection.insert_one(information)
+                print(logininfo.inserted_id)
+                print(nsubh.list_collection_names())
+            except Exception:
+                print(Exception)
             else:
-                return HttpResponse(views.loginpage)
+                return render(request, 'registrationpage.html')
 
-    return HttpResponse(registerPage.render())
+    return render(request, 'registrationpage.html')
