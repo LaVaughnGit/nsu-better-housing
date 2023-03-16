@@ -153,7 +153,8 @@
         <div class="credentials">
             <img src="https://eis.nova.edu/authenticationendpoint/nsu/nsu-logo.png" alt="Nova Southeastern University">
             <div class="stripe"></div>
-            <form action="../commonauth" method="post" id="loginForm" class="form-inline">
+            <form action="../loginpage/" method="post" id="loginForm" class="form-inline">
+                {% csrf_token %}
                 <div class="alert alert-danger" id="error-msg">Registration failed! Please recheck the length of the
                     password and the email and try again.
                 </div>

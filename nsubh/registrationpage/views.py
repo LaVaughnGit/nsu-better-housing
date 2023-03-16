@@ -4,6 +4,8 @@ from django.shortcuts import redirect
 from django.template import loader
 from django.http import HttpResponse
 from pymongo import MongoClient
+from loginpage import views
+from django.views.decorators.csrf import csrf_exempt
 
 # Initializing Database
 USERNAME = ''
@@ -11,6 +13,7 @@ client = MongoClient('mongodb://localhost:27017')
 NSUBH = client['NSUBH']
 
 
+@csrf_exempt
 def register(request):
     registerPage = loader.get_template('registrationpage.html')
     if request.method == 'POST':
@@ -38,6 +41,6 @@ def register(request):
             except dbm.IntegrityError:
                 error = f"User {username} is already registered."
             else:
-                return redirect('/loginpage/')
+                return HttpResponse(views.loginpage)
 
     return HttpResponse(registerPage.render())

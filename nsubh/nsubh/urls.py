@@ -19,6 +19,7 @@ from loginpage import views
 
 urlpatterns = [
     path('', views.loginpage, name='loginpage'),
+    path('loginpage/', include('loginpage.urls')),
     path('homepage/', include('homepage.urls')),
     path('buildingselection/', include('buildingselection.urls')),
     path('thecommonsrs', include('thecommonsRS.urls')),
