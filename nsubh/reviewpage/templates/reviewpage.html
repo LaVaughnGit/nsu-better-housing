@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+   body {
+        background: #003893; //url("https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZSUyMHBhdHRlcm58ZW58MHx8MHx8&w=1000&q=80") no-repeat center center fixed;
+        webkit-background-size: cover;
+        background-size: cover;
+        font-size: .9em;
+        font: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-align:center;
+    }
+    #container{
+        margin-left: auto;
+        margin-right: auto;
+        background-color:white;
+        max-width:70%;
+        border: 3px solid black;
+    }
+    .Header{
+        font-size: 4em;
+    }
+    .Warning{
+        font-style:italic;
+    }
+    .User-info info{
+        font-weight:bold;
+    }
+    .Room-info room{
+        font-weight:bold;
+    }
+    .review-btn{
+        background-color:lightgrey;
+        border:0pt;
+        margin:5pt;
+        padding:10px 40px;
+        font-size:14pt;
+    }
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Review Page</title>
+</head>
+<body>
+  <div id="container">
+      <form action="../homepage/" method="post" id="loginForm" class="form-inline">
+          <div class="Header"><p>Review</p></div>
+          <div class="Warning"><p>this will warn the user to read carefully</p></div>
+          <div class="User-info"><p>this will display the users info:<info><br>N number<br>name<br>Email</info></p></div>
+          <div class="Room-info"><p>This will display Users room choice:<room><br>building<br>room number</room></p></div>
+          <div class="Warning"><p>final warning for user</p></div>
+          <button id="submitBtn" class="review-btn" type="submit">Submit</button>
+      </form>
+  </div>
+</body>
+</html>

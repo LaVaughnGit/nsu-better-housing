@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+		<script type="module">
+			import * as THREE from 'https://unpkg.com/three/build/three.module.js';
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSUBH Homepage</title>
-</head>
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-<body>
-    <h1>This is the homepage</h1>
-</body>
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
 
+
+			const geometry = new THREE.TorusKnotGeometry( 10, 2, 100, 16 );
+			const material = new THREE.MeshBasicMaterial( { color: 0xff0090 } );
+			const cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+
+
+			camera.position.z = 50;
+
+
+
+			function animate() {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+
+				renderer.render( scene, camera );
+			}
+
+			animate();
+		</script>
+	</body>
 </html>
