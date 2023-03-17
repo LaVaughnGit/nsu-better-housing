@@ -25,5 +25,6 @@ urlpatterns = [
     path('thecommonsrs', include('thecommonsRS.urls')),
     path('register/', include('registrationpage.urls')),
     path('reviewpage/', include('reviewpage.urls')),
+    path('completionpage/', include('completionpage.urls')),
     path('admin/', admin.site.urls),
 ]

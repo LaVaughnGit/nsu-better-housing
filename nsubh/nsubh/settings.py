@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'thecommonsRS',
     'loginpage',
     'registrationpage',
-    'reviewpage'
+    'reviewpage',
+    'completionpage'
 ]
 
 MIDDLEWARE = [
