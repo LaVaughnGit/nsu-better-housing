@@ -22,7 +22,7 @@ urlpatterns = [
     path('loginpage/', include('loginpage.urls')),
     path('homepage/', include('homepage.urls')),
     path('buildingselection/', include('buildingselection.urls')),
-    path('thecommonsrs', include('thecommonsRS.urls')),
+    path('thecommons/', include('thecommonsRS.urls')),
     path('register/', include('registrationpage.urls')),
     path('reviewpage/', include('reviewpage.urls')),
     path('completionpage/', include('completionpage.urls')),
