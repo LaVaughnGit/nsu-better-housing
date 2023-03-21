@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration Page</title>
-     <link rel="stylesheet" href="registrationstyle.css">
+    <link rel="stylesheet" href="registrationstyle.css">
 </head>
 <style>
     body {
@@ -170,7 +170,7 @@
                 <div class="form-group">
                     <input type="hidden" name="sessionDataKey" value="01d87362-6e93-4c32-9db2-4e6ab2c42868">
                 </div>
-                <select id="year" class="select-inline" tabindex="2">
+                <select id="year" name="year" class="select-inline" tabindex="2">
                     <option value="" disabled selected>Current Year</option>
                     <option value="1">First Year</option>
                     <option value="2">Second Year</option>
@@ -181,7 +181,8 @@
 
                 <div class="form-actions">
                     <button id="submitform" class="btn btn-default btn-block" type="submit">Register</button>
-                    <input disabled="disabled" value="Authenticating" class="btn btn-default btn-block" style="display:none" tabindex="3" type="button">
+                    <input disabled="disabled" value="Authenticating" class="btn btn-default btn-block"
+                        style="display:none" tabindex="3" type="button">
                 </div>
             </form>
             {% endblock %}
