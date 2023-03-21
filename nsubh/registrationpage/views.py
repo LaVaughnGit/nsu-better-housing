@@ -32,13 +32,13 @@ def register(request):
             logincollection = nsubh["Login"]
             USERNAME = username
             information = {
-            "Username:": username,
+            "Username": username,
             "Password": password,
             "Year": year,
             "Date Created": datetime.datetime.utcnow()
             }
             logininfo = logincollection.insert_one(information)
-            print(nsubh.list_collection_names())
+            print("Inserted")
             return render(request, 'loginpage.html')
 
 
