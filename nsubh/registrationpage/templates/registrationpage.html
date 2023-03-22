@@ -156,9 +156,11 @@
             <img src="https://eis.nova.edu/authenticationendpoint/nsu/nsu-logo.png" alt="Nova Southeastern University">
             <form method="post" id="loginForm" class="form-inline">
                 {% csrf_token %}
+                {%if username == "!" or password == "!" %}
                 <div class="alert alert-danger" id="error-msg">Registration failed! Please recheck the length of the
                     password and the email and try again.
                 </div>
+                {% endif %}
                 <div class="form-group">
                     <input id="username" name="username" type="text" class="form-control" tabindex="0"
                         placeholder="Username">
