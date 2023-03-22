@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>    body {
+<style>
+    body {
         background: #003893 url("https://risere.com/wp-content/uploads/2018/08/Nova-Southeastern-121.jpg") no-repeat center center fixed;
         webkit-background-size: cover;
         background-size: cover;
@@ -155,39 +156,44 @@
         display: block;
     }
 </style>
+
 <head>
     <meta charset="UTF-8">
     <title>NSU Better Housing Login</title>
-    <link rel="stylesheet" type="text/css" href="loginstyle.css">
+    <link rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div id="login">
         <div class="credentials">
             <img src="https://eis.nova.edu/authenticationendpoint/nsu/nsu-logo.png" alt="Nova Southeastern University">
-                <form action="../homepage/" method="post" id="loginForm" class="form-inline">
-                    <div class="alert alert-danger" id="error-msg">
-                        Login failed! Please recheck the username and password and try again.
-                    </div>
-                    <div class="form-group">
-                        <input id="username" name="username" type="text" class="form-control" tabindex="1" placeholder="Username">
-                    </div>
-                    <div class="form-group">
-                        <input id="password" name="password" type="password" class="form-control" tabindex="2" placeholder="Password" autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                        <input type="hidden" name="sessionDataKey" value="01d87362-6e93-4c32-9db2-4e6ab2c42868">
-                    </div>
-                    <div class="form-actions">
-                        <button id="submitform" class="btn btn-default btn-block" type="submit">Log In</button>
-                    </div>
-                </form>
+            <form action="../loginpage/" method="post" id="loginForm" class="form-inline">
+                <div class="alert alert-danger" id="error-msg">
+                    Login failed! Please recheck the username and password and try again.
+                </div>
+                <div class="form-group">
+                    <input id="username" name="username" type="text" class="form-control" tabindex="1"
+                        placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input id="password" name="password" type="password" class="form-control" tabindex="2"
+                        placeholder="Password" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="sessionDataKey" value="01d87362-6e93-4c32-9db2-4e6ab2c42868">
+                </div>
+                <div class="form-actions">
+                    <button id="submitform" class="btn btn-default btn-block" type="submit">Log In</button>
+                </div>
+            </form>
         </div>
         <div id="footer">
-            <p><span id="iphone"></span>Check out our mobile app, <a href="http://www.nova.edu/ishark/index.html" target="_blank">iShark</a>.</p>
+            <p><span id="iphone"></span>Check out our mobile app, <a href="http://www.nova.edu/ishark/index.html"
+                    target="_blank">iShark</a>.</p>
             <p>
                 <a href="http://www.nova.edu/sharklinkid/index.html" target="_blank">Forgot Username</a><br>
-                <a href="https://reset.nova.edu/#/" target="_blank">Reset Password</a> / <a href="https://adfs.nova.edu/adfs/portal/updatepassword" target="_blank">Change Password</a><br>
+                <a href="https://reset.nova.edu/#/" target="_blank">Reset Password</a> / <a
+                    href="https://adfs.nova.edu/adfs/portal/updatepassword" target="_blank">Change Password</a><br>
                 <a href="http://127.0.0.1:8000/register/" target="_blank">Register Account</a>
             </p>
             <p>When finished in application, remember to logout and close your Web browser.</p>
