@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'loginpage',
     'registrationpage',
     'reviewpage',
-    'completionpage'
+    'completionpage',
+    'floorselection',
+    'roomselection',
 ]
 
 MIDDLEWARE = [
