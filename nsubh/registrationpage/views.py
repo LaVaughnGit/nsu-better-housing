@@ -16,6 +16,9 @@ nsubh = client["NSUBH"]
 @csrf_exempt
 def register(request):
     if request.method == 'POST':
+        firstname = request.POST['firstname']
+        lastname = request.POST['lastname']
+        nnumber = request.POST['n#']
         username = request.POST['username']
         password = request.POST['password']
         year = request.POST.get('year', False)
@@ -32,6 +35,9 @@ def register(request):
             logincollection = nsubh["Login"]
             USERNAME = username
             information = {
+            "First Name": firstname,
+            "Last Name": lastname,
+            "N Number": nnumber,
             "Username": username,
             "Password": password,
             "Year": year,

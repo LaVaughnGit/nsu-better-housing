@@ -163,14 +163,18 @@
     <link rel="stylesheet" type="text/css">
 </head>
 
+{% block content %}
+
 <body>
     <div id="login">
         <div class="credentials">
             <img src="https://eis.nova.edu/authenticationendpoint/nsu/nsu-logo.png" alt="Nova Southeastern University">
             <form action="../loginpage/" method="post" id="loginForm" class="form-inline">
+                {% if error != None %}
                 <div class="alert alert-danger" id="error-msg">
                     Login failed! Please recheck the username and password and try again.
                 </div>
+                {% endif %}
                 <div class="form-group">
                     <input id="username" name="username" type="text" class="form-control" tabindex="1"
                         placeholder="Username">
@@ -201,5 +205,6 @@
     </div>
 
 </body>
+{% endblock %}
 
 </html>

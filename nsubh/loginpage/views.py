@@ -7,10 +7,11 @@ from homepage import views
 
 client = MongoClient("mongodb://localhost:27017")
 nsubh = client["NSUBH"]
+
+
 @csrf_exempt
 def loginpage(request):
     # Check the request method
-    print('working')
     if request.method == 'POST':
         print('working')
         username = request.POST['username']
@@ -25,18 +26,24 @@ def loginpage(request):
         if dbUserDocument:
             docUser = dbUserDocument["Username"]
             docPass = dbUserDocument["Password"]
-        
+
         user = docUser
         passwordChecker = False
         if user != username:
-            error = 'Incorrect username. '
+            error = 'Incorrect username.'
 
         elif docPass == password:
             passwordChecker = True
 
         elif not passwordChecker:
             error = 'Incorrect password.'
+        else:
+            error = None
 
         if error is None:
             return render(request, 'homepage.html')
+        else:
+            print(error)
+            return render(request, 'loginpage.html')
+
     return render(request, 'loginpage.html')

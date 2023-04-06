@@ -6,5 +6,9 @@ from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
 def reviewpage(request):
-    template = loader.get_template('reviewpage.html')
-    return HttpResponse(template.render())
+    if request.method == 'POST':
+        context = {
+            'username': 'Bonk',
+            'nnumber': '12345678',
+        }
+    return render(request, 'reviewpage.html', context)
