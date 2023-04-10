@@ -8,6 +8,9 @@ from homepage import views
 client = MongoClient("mongodb://localhost:27017")
 nsubh = client["NSUBH"]
 
+userNameStored = ''
+nNumberStored = ''
+
 
 @csrf_exempt
 def loginpage(request):
@@ -41,6 +44,8 @@ def loginpage(request):
             error = None
 
         if error is None:
+            userNameStored = docUser
+            nNumberStored = 12345678
             return render(request, 'homepage.html')
         else:
             print(error)
