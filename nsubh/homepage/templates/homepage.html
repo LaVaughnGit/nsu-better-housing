@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Home Page</title>
-		<style>
-			body{
-			width:100%; height:100%; margin:0; position:fixed;
-			}
-		</style>
-	</head>
-	<body>
+
+<head>
+	<meta charset="utf-8">
+	<title>Home Page</title>
+	<style>
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			position: fixed;
+		}
+	</style>
+</head>
+{% block content %}
+
+<body>
 	<!--
 	 <form action="../thecommons/" method="post">
 		<select id="year" class="select-inline" tabindex="1">
@@ -26,7 +32,11 @@
 	 <button class="" type="submit" tabindex="2">View</button>
 	 </form>
 	-->
-		<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.275/build/spline-viewer.js"></script>
-		<spline-viewer url="https://prod.spline.design/INw6suJQQ3L9BPFK/scene.splinecode"></spline-viewer>
-	</body>
+
+	<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.275/build/spline-viewer.js"></script>
+	<spline-viewer url="https://prod.spline.design/INw6suJQQ3L9BPFK/scene.splinecode"></spline-viewer>
+	<h1>{{ user }}</h1>
+</body>
+{% endblock %}
+
 </html>
