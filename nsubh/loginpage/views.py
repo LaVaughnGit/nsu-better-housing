@@ -29,6 +29,7 @@ def loginpage(request):
         if dbUserDocument:
             docUser = dbUserDocument["Username"]
             docPass = dbUserDocument["Password"]
+            docNNumber = dbUserDocument["N Number"]
 
         user = docUser
         passwordChecker = False
@@ -45,8 +46,12 @@ def loginpage(request):
 
         if error is None:
             userNameStored = docUser
-            nNumberStored = 12345678
-            return render(request, 'homepage.html', {'username': user})
+            nNumberStored = docNNumber
+            loginInformation = {
+                'username': username,
+                'nnumber': docNNumber,
+            }
+            return render(request, 'homepage.html', loginInformation)
         else:
             print(error)
             return render(request, 'loginpage.html')
