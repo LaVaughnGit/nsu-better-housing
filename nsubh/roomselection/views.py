@@ -13,8 +13,10 @@ def makoRS(request):
     mkh = nsubh['MKH']
     cursor = mkh.find({})
     for document in cursor:
+        roomNumber = document['Room']
+        bedType = document['Bed']
         if document['Occupied'] == 'T':
-            print('LFG')
+            print(roomNumber + '' + bedType)
     return HttpResponse(template.render())
 
 
