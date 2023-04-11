@@ -10,6 +10,11 @@ nsubh = client["NSUBH"]
 
 def makoRS(request):
     template = loader.get_template('makoRS.html')
+    mkh = nsubh['MKH']
+    cursor = mkh.find({})
+    for document in cursor:
+        if document['Occupied'] == 'T':
+            print('LFG')
     return HttpResponse(template.render())
 
 
