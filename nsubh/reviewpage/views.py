@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from pymongo import MongoClient
+from loginpage.views import userNameStored, nNumberStored
 client = MongoClient("mongodb://localhost:27017")
 nsubh = client["NSUBH"]
 
@@ -15,9 +16,11 @@ def reviewpage(request):
         bed = request.POST.get('bed', False)
         print(roomnumber)
         print(bed)
+        print(userNameStored)
+        print(nNumberStored)
         context = {
-            'username': "test",
-            'nnumber': "12345678",
+            'username': userNameStored,
+            'nnumber': nNumberStored,
             'email': '123@nova.edu',
             'roomnumber': roomnumber,
             'bed': bed,
