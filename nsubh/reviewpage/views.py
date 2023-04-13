@@ -12,8 +12,8 @@ nsubh = client["NSUBH"]
 def reviewpage(request):
     context = {}
     if request.method == 'POST':
-        roomnumber = request.POST.get('room', False)
-        bed = request.POST.get('bed', False)
+        roomnumber = request.POST.get('R', False)
+        bed = request.POST.get('B', False)
         print(roomnumber)
         print(bed)
         print(userNameStored)
