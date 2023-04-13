@@ -13,6 +13,8 @@ def reviewpage(request):
     if request.method == 'POST':
         roomnumber = request.POST.get('room', False)
         bed = request.POST.get('bed', False)
+        print(roomnumber)
+        print(bed)
         context = {
             'username': "test",
             'nnumber': "12345678",
