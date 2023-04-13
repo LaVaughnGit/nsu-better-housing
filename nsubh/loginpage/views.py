@@ -52,7 +52,10 @@ def loginpage(request):
             }
             return render(request, 'homepage.html', loginInformation)
         else:
+            errorInfo = {
+                'error': error,
+            }
             print(error)
-            return render(request, 'loginpage.html')
+            return render(request, 'loginpage.html', errorInfo)
 
     return render(request, 'loginpage.html')
