@@ -14,6 +14,7 @@
     position: absolute;
     text-align: center;
   }
+  input{}
 </style>
 <script>
   var select = false;
@@ -42,13 +43,17 @@
     if (select == true) {
       document.getElementById(prev).style.fill = "limegreen";
       document.getElementById(num).style.fill = "blue";
-      document.getElementById("room").innerHTML = roomNum;
-      document.getElementById("bed").innerHTML = bed;
+      //document.getElementById("room").innerHTML = roomNum;
+      //document.getElementById("bed").innerHTML = bed;
+      document.getElementById("R").value = roomNum;
+      document.getElementById("B").value = bed;
     }
     else {
       document.getElementById(num).style.fill = "blue";
-      document.getElementById("room").innerHTML = roomNum;
-      document.getElementById("bed").innerHTML = bed;
+      //document.getElementById("room").innerHTML = roomNum;
+      //document.getElementById("bed").innerHTML = bed;
+      document.getElementById("R").value = roomNum;
+      document.getElementById("B").value = bed;
     }
     prev = num;
     select = true;
@@ -76,18 +81,19 @@
 
     <hr>
     <h3>Current Selection</h3>
-    <div style="display: flex;">
+    <!--<div style="display: flex;">
       <p id="room">room number</p>
       <p></p>
       <p id="bed"> bed number</p>
-    </div>
-    <form action="../reviewpage/" method="post">
-      <input type="text" value="101" id="room" name="room">
-      <input type="text" value="A" name="bed" id="bed">
+    </div>-->
+
+    <form action="../reviewpage/" method="post" >
+      {% csrf_token %}
+      <input type="text" value=room id="R" name="R">
+      <input type="text" value=bed name="B" id="B">
       <input type="submit" value="Submit">
     </form>
   </div>
-
   <div class="First Floor" id="First Floor">
     <svg height="700" width="1500">
       <!--Mako building outline-->
