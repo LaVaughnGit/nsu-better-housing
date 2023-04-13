@@ -21,6 +21,7 @@ def register(request):
         nnumber = request.POST['n#']
         username = request.POST['username']
         password = request.POST['password']
+        email = request.POST['email']
         year = request.POST.get('year', False)
         error = None
 
@@ -35,17 +36,17 @@ def register(request):
             logincollection = nsubh["Login"]
             USERNAME = username
             information = {
-            "First Name": firstname,
-            "Last Name": lastname,
-            "N Number": nnumber,
-            "Username": username,
-            "Password": password,
-            "Year": year,
-            "Date Created": datetime.datetime.utcnow()
+                "First Name": firstname,
+                "Last Name": lastname,
+                "N Number": nnumber,
+                "Username": username,
+                "Password": password,
+                "EMail": email,
+                "Year": year,
+                "Date Created": datetime.datetime.utcnow()
             }
             logininfo = logincollection.insert_one(information)
             print("Inserted")
             return render(request, 'loginpage.html')
-
 
     return render(request, 'registrationpage.html')
