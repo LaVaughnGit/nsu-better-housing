@@ -10,9 +10,9 @@ nsubh = client["NSUBH"]
 
 def makoRS(request):
     template = loader.get_template('makoRS.html')
-    mkh = nsubh['MKH']
-    cursor = mkh.find({})
     loginpage.building = 'MAK'
+    mkh = nsubh[loginpage.building]
+    cursor = mkh.find({})
     for document in cursor:
         roomNumber = document['Room']
         bedType = document['Bed']
@@ -23,34 +23,90 @@ def makoRS(request):
 
 def commonsRS(request):
     template = loader.get_template('commonsRS.html')
+    loginpage.building = 'COM'
+    mkh = nsubh[loginpage.building]
+    cursor = mkh.find({})
+    for document in cursor:
+        roomNumber = document['Room']
+        bedType = document['Bed']
+        if document['Occupied'] == 'T':
+            print(roomNumber + '' + bedType)
     return HttpResponse(template.render())
 
 
 def leogoodwinRS(request):
     template = loader.get_template('leogoodwinRS.html')
+    loginpage.building = 'LGW'
+    mkh = nsubh[loginpage.building]
+    cursor = mkh.find({})
+    for document in cursor:
+        roomNumber = document['Room']
+        bedType = document['Bed']
+        if document['Occupied'] == 'T':
+            print(roomNumber + '' + bedType)
     return HttpResponse(template.render())
 
 
 def farquharRS(request):
     template = loader.get_template('farquharRS.html')
+    loginpage.building = 'FAR'
+    mkh = nsubh[loginpage.building]
+    cursor = mkh.find({})
+    for document in cursor:
+        roomNumber = document['Room']
+        bedType = document['Bed']
+        if document['Occupied'] == 'T':
+            print(roomNumber + '' + bedType)
     return HttpResponse(template.render())
 
 
 def foundersRS(request):
     template = loader.get_template('foundersRS.html')
+    loginpage.building = 'FOU'
+    mkh = nsubh[loginpage.building]
+    cursor = mkh.find({})
+    for document in cursor:
+        roomNumber = document['Room']
+        bedType = document['Bed']
+        if document['Occupied'] == 'T':
+            print(roomNumber + '' + bedType)
     return HttpResponse(template.render())
 
 
 def vettelRS(request):
     template = loader.get_template('vettelRS.html')
+    loginpage.building = 'VET'
+    mkh = nsubh[loginpage.building]
+    cursor = mkh.find({})
+    for document in cursor:
+        roomNumber = document['Room']
+        bedType = document['Bed']
+        if document['Occupied'] == 'T':
+            print(roomNumber + '' + bedType)
     return HttpResponse(template.render())
 
 
 def clcRS(request):
     template = loader.get_template('clcRS.html')
+    loginpage.building = 'CLC'
+    mkh = nsubh[loginpage.building]
+    cursor = mkh.find({})
+    for document in cursor:
+        roomNumber = document['Room']
+        bedType = document['Bed']
+        if document['Occupied'] == 'T':
+            print(roomNumber + '' + bedType)
     return HttpResponse(template.render())
 
 
 def rollingRS(request):
     template = loader.get_template('rollingRS.html')
+    loginpage.building = 'ROLL'
+    mkh = nsubh[loginpage.building]
+    cursor = mkh.find({})
+    for document in cursor:
+        roomNumber = document['Room']
+        bedType = document['Bed']
+        if document['Occupied'] == 'T':
+            print(roomNumber + '' + bedType)
     return HttpResponse(template.render())
