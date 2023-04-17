@@ -18,7 +18,8 @@ def reviewpage(request):
         print(bed)
         print(loginpage.user)
         print(loginpage.password)
-
+        reviewpage.roomnumber = roomnumber
+        reviewpage.bed = bed
         context = {
             'username': loginpage.firstname + " " + loginpage.lastname,
             'nnumber': loginpage.nnumber,
