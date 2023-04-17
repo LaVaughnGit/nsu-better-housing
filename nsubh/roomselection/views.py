@@ -9,16 +9,21 @@ nsubh = client["NSUBH"]
 
 
 def makoRS(request):
-    template = loader.get_template('makoRS.html')
+    context = {}
     loginpage.building = 'MAK'
     mkh = nsubh[loginpage.building]
     cursor = mkh.find({})
+    occupiedBeds = []
     for document in cursor:
         roomNumber = document['Room']
         bedType = document['Bed']
         if document['Occupied'] == 'T':
             print(roomNumber + '' + bedType)
-    return HttpResponse(template.render())
+            occupiedBeds.append(roomNumber + "" + bedType)
+    context = {
+        "occupiedrooms": occupiedBeds,
+    }
+    return render(request, 'makors.html', context)
 
 
 def commonsRS(request):
@@ -52,11 +57,13 @@ def farquharRS(request):
     loginpage.building = 'FAR'
     mkh = nsubh[loginpage.building]
     cursor = mkh.find({})
+    occupiedBeds = []
     for document in cursor:
         roomNumber = document['Room']
         bedType = document['Bed']
         if document['Occupied'] == 'T':
             print(roomNumber + '' + bedType)
+            occupiedBeds.append(roomNumber + "" + bedType)
     return HttpResponse(template.render())
 
 
