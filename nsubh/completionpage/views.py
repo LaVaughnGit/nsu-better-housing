@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from pymongo import MongoClient
 from reviewpage.views import reviewpage
 from loginpage.views import loginpage
+
 client = MongoClient("mongodb://localhost:27017")
 nsubh = client["NSUBH"]
 
@@ -12,7 +13,7 @@ nsubh = client["NSUBH"]
 @csrf_exempt
 def completionpage(request):
     if request.method == 'POST':
-        logincollection = nsubh['MKH']
+        logincollection = nsubh['MAK']
         userquery = {"Bed": reviewpage.bed, "Room": reviewpage.roomnumber}
         dbUserDocument = logincollection.find_one(userquery)
         updatedName = {
