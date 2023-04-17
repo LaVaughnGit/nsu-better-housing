@@ -13,7 +13,7 @@ nsubh = client["NSUBH"]
 @csrf_exempt
 def completionpage(request):
     if request.method == 'POST':
-        logincollection = nsubh['MAK']
+        logincollection = nsubh[loginpage.building]
         userquery = {"Bed": reviewpage.bed, "Room": reviewpage.roomnumber}
         dbUserDocument = logincollection.find_one(userquery)
         updatedName = {

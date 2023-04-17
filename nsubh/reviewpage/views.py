@@ -24,6 +24,7 @@ def reviewpage(request):
             'username': loginpage.firstname + " " + loginpage.lastname,
             'nnumber': loginpage.nnumber,
             'email': loginpage.email,
+            'building': loginpage.building,
             'roomnumber': roomnumber,
             'bed': bed,
         }

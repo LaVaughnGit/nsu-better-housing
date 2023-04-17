@@ -59,6 +59,7 @@ def loginpage(request):
             loginpage.email = docEmail
             loginpage.firstname = docFN
             loginpage.lastname = docLN
+            loginpage.building = ''
             return render(request, 'homepage.html', loginInformation)
         else:
             errorInfo = {
