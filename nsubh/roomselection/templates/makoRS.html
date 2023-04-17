@@ -14,15 +14,16 @@
     position: absolute;
     text-align: center;
   }
-  input[type='text']{
-  background: rgba(255,255,255,0.4);
-  border: none;
-  outline: none;
-  width: 22px;
-  height: 30px;
-  margin: 0 auto;
-  padding: 0px;
-  color: #333;
+
+  input[type='text'] {
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    outline: none;
+    width: 22px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0px;
+    color: #333;
   }
 </style>
 <script>
@@ -96,7 +97,7 @@
       <p id="bed"> bed number</p>
     </div>-->
 
-    <form action="../reviewpage/" method="post" >
+    <form action="../reviewpage/" method="post">
       {% csrf_token %}
       <input type="text" value="" id="R" name="R">
       <input type="text" value="" name="B" id="B"><br>

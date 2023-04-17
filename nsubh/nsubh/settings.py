@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'registrationpage',
     'reviewpage',
     'completionpage',
-    'floorselection',
     'roomselection',
 
 ]

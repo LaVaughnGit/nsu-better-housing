@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from floorselection.views import makofs, commonsFS, clcFS, leogoodwinFS, farquharFS, foundersFS, vettelFS, rollingFS
 from roomselection.views import makoRS, commonsRS, clcRS, leogoodwinRS, farquharRS, foundersRS, vettelRS, rollingRS
 
 urlpatterns = [
@@ -27,14 +26,6 @@ urlpatterns = [
     path('register/', include('registrationpage.urls')),
     path('reviewpage/', include('reviewpage.urls')),
     path('completionpage/', include('completionpage.urls')),
-    path('makofs/', makofs, name='makofs'),
-    path('commonsfs/', commonsFS, name='commonsfs'),
-    path('clcfs/', clcFS, name='clcFS'),
-    path('leogoodwinfs/', leogoodwinFS, name='leogoodwinFS'),
-    path('farquharfs/', farquharFS, name='farquharFS'),
-    path('foundersfs/', foundersFS, name='foundersFS'),
-    path('vettelfs/', vettelFS, name='vettelFS'),
-    path('rollingfs', rollingFS, name='rollingFS'),
     path('makors/', makoRS, name='makoRS'),
     path('commonsrs/', commonsRS, name='commonsRS'),
     path('clcrs/', clcRS, name='clcRS'),
