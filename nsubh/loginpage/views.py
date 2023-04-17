@@ -11,6 +11,8 @@ nsubh = client["NSUBH"]
 userNameStored = ''
 nNumberStored = ''
 
+loginInfo = {}
+
 
 @csrf_exempt
 def loginpage(request):
@@ -29,6 +31,9 @@ def loginpage(request):
             docUser = dbUserDocument["Username"]
             docPass = dbUserDocument["Password"]
             docNNumber = dbUserDocument["N Number"]
+            docEmail = dbUserDocument["EMail"]
+            docFN = dbUserDocument["First Name"]
+            docLN = dbUserDocument["Last Name"]
 
         user = docUser
         passwordChecker = False
@@ -44,12 +49,16 @@ def loginpage(request):
             error = None
 
         if error is None:
-            userNameStored = docUser
-            nNumberStored = docNNumber
             loginInformation = {
                 'username': username,
                 'nnumber': docNNumber,
             }
+            loginpage.user = username
+            loginpage.password = password
+            loginpage.nnumber = docNNumber
+            loginpage.email = docEmail
+            loginpage.firstname = docFN
+            loginpage.lastname = docLN
             return render(request, 'homepage.html', loginInformation)
         else:
             errorInfo = {
