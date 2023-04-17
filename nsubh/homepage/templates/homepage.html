@@ -11,30 +11,66 @@
 			margin: 0;
 			position: fixed;
 		}
+		ul{
+		columns: 2;
+		list-style-type: none;
+		font-size:200%;
+		}
+		a{
+		text-decoration: none;
+		color:black;
+		top:0px;
+		}
+		.namebox{
+			width:50%;
+			height:40%;
+			top: 0;
+			left: 0px;
+			position: absolute;
+			text-align: left;
+			background-color:white;
+			border-radius: 10px;
+			padding:20px;
+		}
+		map{
+		position:absolute;
+		}
+		a:hover {
+  			color: lightgrey;
+  		}
+  		.name{
+  			font-size:125%;
+  			padding:0px;
+  		}
+  		p{
+  			font-size:170%;
+  			text-align:center;
+  		}
+  		hr{
+  		margin: 0px 0 0px 0;
+  		}
+
 	</style>
 </head>
 {% block content %}
-
 <body>
-	<!--
-	 <form action="../thecommons/" method="post">
-		<select id="year" class="select-inline" tabindex="1">
-                    <option value="" disabled selected>Housing Option</option>
-                    <option value="Mako">Mako Hall</option>
-                    <option value="Leo">Leo Goodwin Sr. Hall</option>
-                    <option value="Commons">The Commons</option>
-                    <option value="CLC">Cultural Living Center</option>
-                    <option value="Vettel">Vettel Apartments</option>
-					<option value="Farquhar">Farquhar Apartments</option>
-					<option value="Founders">Founders Apartments</option>
-					<option value="Rolling">Rolling Hills Graduate Residence</option>
-		</select>
-	 <button class="" type="submit" tabindex="2">View</button>
-	 </form>
-	-->
-	<h1>{{ username }}</h1>
-	<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.275/build/spline-viewer.js"></script>
+	<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.298/build/spline-viewer.js"></script>
 	<spline-viewer url="https://prod.spline.design/INw6suJQQ3L9BPFK/scene.splinecode"></spline-viewer>
+	<div class="namebox"><div class="name">Welcome, {{ username }}</div>
+		<p>Building Selections</p><hr>
+	<ul>
+		<li><a href="http://127.0.0.1:8000/clcrs/">Cultural Living Center</a></li>
+		<li><a href="http://127.0.0.1:8000/farquharrs/">Farquhar Apartments</a></li>
+		<li><a href="http://127.0.0.1:8000/foundersrs/">Founders Apartments</a></li>
+		<li><a href="http://127.0.0.1:8000/leogoodwinrs/">Leo Goodwin Sr. Hall</a></li>
+		<li><a href="http://127.0.0.1:8000/makors/">Mako Hall</a></li>
+		<li><a href="http://127.0.0.1:8000/rollingrs/">Rolling Hills</a></li>
+		<li><a href="http://127.0.0.1:8000/commonsrs/">The Commons</a></li>
+		<li><a href="http://127.0.0.1:8000/vettelrs/">Vettel Apartments</a></li>
+	</ul>
+	</div>
+
+
 </body>
 {% endblock %}
 
