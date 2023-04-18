@@ -26,14 +26,17 @@
     color: #333;
   }
 </style>
-<script>
+{% block content %}
+{{ occupiedrooms|json_script:"occupiedrooms" }}
+<script text="text/javascript">
   var select = false;
   var prev;
-  const occupied = JSON.parse('{{ occupiedrooms }}');
+  const rooms = "{{ occupiedrooms }}";
+  const occupied = JSON.parse(rooms);
 
   function load() {
     for (var i = 0; i < occupied.length; i++) {
-      document.getElementById(occupied).style.fill = "red";
+      document.getElementById(occupied[i]).style.fill = "red";
       console.log(occupied[i]);
     }
   }
@@ -74,6 +77,7 @@
   }
 
 </script>
+{% endblock %}
 
 <body style="margin:0;" onload="load()">
 
@@ -596,7 +600,7 @@
       <polyline points="430,100 515,100 515,60" style="fill:none;stroke:black;stroke-width:2" />
       <text x="445" y="95" style="font:15px sans-serif;">226</text>
 
-            <!--RM 143-->
+      <!--RM 143-->
       <polyline points="680,60 680,100 775,100 775,40" style="fill:none;stroke:black;stroke-width:2" />
       <text x="735" y="95" style="font:15px sans-serif;">235</text>
       <!--RM 144-->
@@ -652,7 +656,7 @@
       <text x="1060" y="610" style="font:15px sans-serif;">257</text>
       <!--RM 259-->
       <polyline points="1040,590 980,590 980,680" style="fill:none;stroke:black;stroke-width:2" />
-       <text x="1000" y="610" style="font:15px sans-serif;">259</text>
+      <text x="1000" y="610" style="font:15px sans-serif;">259</text>
       <!--RM 262-->
       <polyline points="980,590 860,590 860,680" style="fill:none;stroke:black;stroke-width:2" />
       <text x="900" y="610" style="font:15px sans-serif;">262</text>
@@ -1101,7 +1105,7 @@
       <text x="1060" y="610" style="font:15px sans-serif;">355</text>
       <!--RM 259-->
       <polyline points="1040,590 980,590 980,680" style="fill:none;stroke:black;stroke-width:2" />
-       <text x="1000" y="610" style="font:15px sans-serif;">357</text>
+      <text x="1000" y="610" style="font:15px sans-serif;">357</text>
       <!--RM 262-->
       <polyline points="980,590 860,590 860,680" style="fill:none;stroke:black;stroke-width:2" />
       <text x="900" y="610" style="font:15px sans-serif;">360</text>
@@ -1443,7 +1447,7 @@
                        220,680 220,660 195,660 195,680 90,680 90,660 10,660
                        10,100 30,100" style="fill:lightgrey;stroke:black;stroke-width:2" />
 
-            <!--Mako Room outlines-->
+      <!--Mako Room outlines-->
       <!--starting from bottom left following through to bottom right-->
 
       <!--RM 101-->
@@ -1566,7 +1570,7 @@
       <text x="1060" y="610" style="font:15px sans-serif;">455</text>
       <!--RM 259-->
       <polyline points="1040,590 980,590 980,680" style="fill:none;stroke:black;stroke-width:2" />
-       <text x="1000" y="610" style="font:15px sans-serif;">457</text>
+      <text x="1000" y="610" style="font:15px sans-serif;">457</text>
       <!--RM 262-->
       <polyline points="980,590 860,590 860,680" style="fill:none;stroke:black;stroke-width:2" />
       <text x="900" y="610" style="font:15px sans-serif;">460</text>
@@ -2029,7 +2033,7 @@
       <text x="1060" y="610" style="font:15px sans-serif;">555</text>
       <!--RM 259-->
       <polyline points="1040,590 980,590 980,680" style="fill:none;stroke:black;stroke-width:2" />
-       <text x="1000" y="610" style="font:15px sans-serif;">557</text>
+      <text x="1000" y="610" style="font:15px sans-serif;">557</text>
       <!--RM 262-->
       <polyline points="980,590 860,590 860,680" style="fill:none;stroke:black;stroke-width:2" />
       <text x="900" y="610" style="font:15px sans-serif;">560</text>
@@ -2369,7 +2373,7 @@
                        220,680 220,660 195,660 195,680 90,680 90,660 10,660
                        10,100 30,100" style="fill:lightgrey;stroke:black;stroke-width:2" />
 
-           <!--Mako Room outlines-->
+      <!--Mako Room outlines-->
       <!--starting from bottom left following through to bottom right-->
 
       <!--RM 101-->
@@ -2492,7 +2496,7 @@
       <text x="1060" y="610" style="font:15px sans-serif;">655</text>
       <!--RM 259-->
       <polyline points="1040,590 980,590 980,680" style="fill:none;stroke:black;stroke-width:2" />
-       <text x="1000" y="610" style="font:15px sans-serif;">657</text>
+      <text x="1000" y="610" style="font:15px sans-serif;">657</text>
       <!--RM 262-->
       <polyline points="980,590 860,590 860,680" style="fill:none;stroke:black;stroke-width:2" />
       <text x="900" y="610" style="font:15px sans-serif;">660</text>
@@ -2832,7 +2836,7 @@
                        220,680 220,660 195,660 195,680 90,680 90,660 10,660
                        10,100 30,100" style="fill:lightgrey;stroke:black;stroke-width:2" />
 
-            <!--Mako Room outlines-->
+      <!--Mako Room outlines-->
       <!--starting from bottom left following through to bottom right-->
 
       <!--RM 101-->
@@ -2955,7 +2959,7 @@
       <text x="1060" y="610" style="font:15px sans-serif;">755</text>
       <!--RM 259-->
       <polyline points="1040,590 980,590 980,680" style="fill:none;stroke:black;stroke-width:2" />
-       <text x="1000" y="610" style="font:15px sans-serif;">757</text>
+      <text x="1000" y="610" style="font:15px sans-serif;">757</text>
       <!--RM 262-->
       <polyline points="980,590 860,590 860,680" style="fill:none;stroke:black;stroke-width:2" />
       <text x="900" y="610" style="font:15px sans-serif;">760</text>
