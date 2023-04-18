@@ -29,11 +29,12 @@
 <script>
   var select = false;
   var prev;
-  var occupied = JSON.parse("{{occupiedBeds}}");
+  const occupied = JSON.parse('{{ occupiedrooms }}');
 
-  function load(){
-  for (var i = 0; i < occupied.length; i++) {
-      document.getElementById(occupied).style.fill = "red"
+  function load() {
+    for (var i = 0; i < occupied.length; i++) {
+      document.getElementById(occupied).style.fill = "red";
+      console.log(occupied[i]);
     }
   }
 
