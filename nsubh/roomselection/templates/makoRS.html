@@ -29,7 +29,13 @@
 <script>
   var select = false;
   var prev;
+  var occupied = JSON.parse("{{occupiedBeds}}");
 
+  function load(){
+  for (var i = 0; i < occupied.length; i++) {
+      document.getElementById(occupied).style.fill = "red"
+    }
+  }
 
   function search() {
     var hidden = ["First Floor", "Second Floor", "Third Floor", "Fourth Floor", "Fifth Floor", "Sixth Floor", "Seventh Floor"];
@@ -53,15 +59,11 @@
     if (select == true) {
       document.getElementById(prev).style.fill = "limegreen";
       document.getElementById(num).style.fill = "blue";
-      //document.getElementById("room").innerHTML = roomNum;
-      //document.getElementById("bed").innerHTML = bed;
       document.getElementById("R").value = roomNum;
       document.getElementById("B").value = bed;
     }
     else {
       document.getElementById(num).style.fill = "blue";
-      //document.getElementById("room").innerHTML = roomNum;
-      //document.getElementById("bed").innerHTML = bed;
       document.getElementById("R").value = roomNum;
       document.getElementById("B").value = bed;
     }
@@ -72,7 +74,8 @@
 
 </script>
 
-<body style="margin:0;">
+<body style="margin:0;" onload="load()">
+
 
   <div class="userinfo">
     <h3>First name, Last name</h3>
@@ -91,12 +94,6 @@
 
     <hr>
     <h3>Current Selection</h3>
-    <!--<div style="display: flex;">
-      <p id="room">room number</p>
-      <p></p>
-      <p id="bed"> bed number</p>
-    </div>-->
-
     <form action="../reviewpage/" method="post">
       {% csrf_token %}
       <input type="text" value="" id="R" name="R">

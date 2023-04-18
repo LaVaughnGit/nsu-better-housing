@@ -16,6 +16,17 @@
     position: absolute;
     text-align: center;
   }
+
+  input[type='text'] {
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    outline: none;
+    width: 22px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0px;
+    color: #333;
+  }
 </style>
 <script>
   var select = false;
@@ -34,23 +45,23 @@
     document.getElementById(floorNum).style.display = "inline";
   }
 
-  function selected(num) {
+function selected(num) {
     var roomNum = num.substring(0, num.length - 1);
     var bed = num[3];
 
-    if(document.getElementById(num).style.fill == "red"){
+    if (document.getElementById(num).style.fill == "red") {
       return;
     }
     if (select == true) {
       document.getElementById(prev).style.fill = "limegreen";
       document.getElementById(num).style.fill = "blue";
-      document.getElementById("room").innerHTML = roomNum;
-      document.getElementById("bed").innerHTML = bed;
+      document.getElementById("R").value = roomNum;
+      document.getElementById("B").value = bed;
     }
     else {
       document.getElementById(num).style.fill = "blue";
-      document.getElementById("room").innerHTML = roomNum;
-      document.getElementById("bed").innerHTML = bed;
+      document.getElementById("R").value = roomNum;
+      document.getElementById("B").value = bed;
     }
     prev = num;
     select = true;
@@ -74,12 +85,10 @@
 
     <hr>
     <h3>Current Selection</h3>
-    <div style="display: flex;">
-      <p id="room">room number</p>
-      <p></p>
-      <p id="bed"> bed number</p>
-    </div>
     <form action="../reviewpage/" method="post">
+      {% csrf_token %}
+      <input type="text" value="" id="R" name="R">
+      <input type="text" value="" name="B" id="B"><br>
       <input type="submit" value="Submit">
     </form>
   </div>
