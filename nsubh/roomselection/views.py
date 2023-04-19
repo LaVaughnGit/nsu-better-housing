@@ -22,6 +22,9 @@ def makoRS(request):
             occupiedBeds.append(roomNumber + "" + bedType)
     context = {
         "occupiedrooms": occupiedBeds,
+        "firstname": loginpage.firstname,
+        "lastname": loginpage.lastname,
+        "nnumber": loginpage.nnumber,
     }
     return render(request, 'makors.html', context)
 
