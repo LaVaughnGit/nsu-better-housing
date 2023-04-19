@@ -30,9 +30,9 @@
 <script text="text/javascript">
   var select = false;
   var prev;
-  const occupied = JSON.parse("{{ occupiedrooms }}")
 
-  function load() {
+
+  function load(occupied) {
     for (var i = 0; i < occupied.length; i++) {
       document.getElementById(occupied[i]).style.fill = "red";
       console.log(occupied[i]);
@@ -79,7 +79,7 @@
 
 
 
-<body style="margin:0;" onload="load()">
+<body style="margin:0;" onload="load({{occupiedrooms}})">
 
 
   <div class="userinfo">
