@@ -31,6 +31,12 @@
   var select = false;
   var prev;
 
+  function load(occupied){
+    for(var i = 0; i < occupied.length; i++){
+      document.getElementById(occupied[i]).style.fill = "red";
+    }
+  }
+
 
   function search() {
     var hidden = ["First Floor", "Second Floor", "Third Floor", "Fourth Floor", "Fifth Floor", "Sixth Floor", "Seventh Floor"];
@@ -69,7 +75,7 @@
 
 </script>
 
-<body style="margin:0;">
+<body style="margin:0;" onload="load({{occupiedrooms}})">
 
   <div class="userinfo">
     <h3>{{ firstname }}, {{ lastname }}</h3>
