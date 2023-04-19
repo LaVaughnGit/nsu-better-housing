@@ -27,12 +27,10 @@
   }
 </style>
 {% block content %}
-{{ occupiedrooms|json_script:"occupiedrooms" }}
 <script text="text/javascript">
   var select = false;
   var prev;
-  const rooms = "{{ occupiedrooms }}";
-  const occupied = JSON.parse(rooms);
+  const occupied = JSON.parse("{{ occupiedrooms }}")
 
   function load() {
     for (var i = 0; i < occupied.length; i++) {
@@ -77,14 +75,16 @@
   }
 
 </script>
-{% endblock %}
+
+
+
 
 <body style="margin:0;" onload="load()">
 
 
   <div class="userinfo">
-    <h3>First name, Last name</h3>
-    <h2>N NUMBER</h2>
+    <h3>{{ firstname }}, {{ lastname }}</h3>
+    <h2>N#: {{ nnumber }}</h2>
     <label for="floor">Choose a floor</label><br>
     <select name="floor" id="floor">
       <option value="1" selected>First Floor</option>
@@ -3279,6 +3279,6 @@
     </svg>
   </div>
 </body>
-
+{% endblock %}
 
 </html>
