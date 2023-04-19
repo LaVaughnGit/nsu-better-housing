@@ -12,9 +12,7 @@
         webkit-background-size: cover;
         background-size: cover;
         font-size: .9em;
-        font: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
-
     #login,
     .contentBox {
         margin-top: 8%;
@@ -29,9 +27,9 @@
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
     }
-
     form input[type="text"],
-    form input[type="password"] {
+    form input[type="password"],
+    form input[type="email"] {
         width: 97%;
         height: 30px;
         padding-left: 15px;
@@ -44,26 +42,21 @@
         -webkit-box-shadow: 0px 0px 1px #666d70;
         box-shadow: 0px 0px 1px #666d70;
     }
-
     form input {
         margin-bottom: 8px;
         display: block;
     }
-
     #footer a {
         color: #fff;
     }
-
     a {
         color: #337ab7;
         text-decoration: none;
     }
-
     select {
         margin-bottom: 8px;
         width: 100%;
     }
-
     .credentials .btn {
         font-weight: bold;
         background: #687379;
@@ -74,12 +67,10 @@
         -moz-border-radius: 3px;
         word-spacing: 4px;
     }
-
     .btn-block {
         display: block;
         width: 100%;
     }
-
     .btn {
         display: inline-block;
         padding: 6px 12px;
@@ -101,7 +92,6 @@
         border: 1px solid transparent;
         border-radius: 4px;
     }
-
     button,
     input,
     optgroup,
@@ -110,17 +100,14 @@
         font: inherit;
         color: inherit;
     }
-
     .alert {
         margin-bottom: 8px;
     }
-
     .alert-danger {
         color: #a94442;
         background-color: #f2dede;
         border-color: #ebccd1;
     }
-
     .alert-error {
         color: #a94442;
         background-color: #f2dede;
@@ -129,17 +116,13 @@
         margin-top: 10px;
         border: 1px solid transparent;
         border-radius: 4px;
-
     }
-
     .alert {
         padding: 15px;
         margin-bottom: 20px;
         border: 1px solid transparent;
         border-radius: 4px;
-
     }
-
     .credentials img {
         display: block;
         height: auto;
@@ -158,7 +141,7 @@
                 {% csrf_token %}
                 {%if username == "!" or password == "!" %}
                 <div class="alert alert-danger" id="error-msg">Registration failed! Please recheck the length of the
-                    password and the email and try again.
+                    password (8 Characters) and the email and try again.
                 </div>
                 {% endif %}
                 <div class="form-group">
@@ -182,7 +165,7 @@
                         autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <input id="email" name="email" type="text" class="form-control" tabindex="0" placeholder="E-mail">
+                    <input id="email" name="email" type="email" class="form-control" tabindex="0" placeholder="E-mail">
                 </div>
                 <div class="form-group">
                     <input type="hidden" name="sessionDataKey" value="01d87362-6e93-4c32-9db2-4e6ab2c42868">
@@ -204,7 +187,7 @@
             </form>
             {% endblock %}
         </div>
-        <div id="footer">
+        <!--<div id="footer">
             <div class="alert-error" id="error-msg">
                 <h3>Password must contain the following:</h3>
                 <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
@@ -213,6 +196,7 @@
                 <p id="length" class="invalid">Minimum <b>8 characters</b></p>
             </div>
         </div>
+        -->
     </div>
     </div>
 

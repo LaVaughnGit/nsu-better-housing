@@ -14,12 +14,15 @@
 		ul{
 		columns: 2;
 		list-style-type: none;
-		font-size:200%;
 		}
 		a{
 		text-decoration: none;
 		color:black;
-		top:0px;
+		font-size:160%;
+		letter-spacing: 3px;
+		}
+		li{
+		padding:2% 0px 2% 0px;
 		}
 		.namebox{
 			width:50%;
@@ -27,7 +30,6 @@
 			top: 0;
 			left: 0px;
 			position: absolute;
-			text-align: left;
 			background-color:white;
 			border-radius: 10px;
 			padding:20px;
@@ -40,21 +42,20 @@
   		}
   		.name{
   			font-size:125%;
-  			padding:0px;
   		}
   		p{
   			font-size:170%;
   			text-align:center;
+  			letter-spacing: 5px;
+  			margin-top:0px;
   		}
-  		hr{
-  		margin: 0px 0 0px 0;
-  		}
+
 
 	</style>
 </head>
 {% block content %}
 <body>
-	<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.298/build/spline-viewer.js"></script>
+	<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.297/build/spline-viewer.js"></script>
 	<spline-viewer url="https://prod.spline.design/INw6suJQQ3L9BPFK/scene.splinecode"></spline-viewer>
 	<div class="namebox"><div class="name">Welcome, {{ username }}</div>
 		<p>Building Selections</p><hr>
@@ -64,7 +65,7 @@
 		<li><a href="http://127.0.0.1:8000/foundersrs/">Founders Apartments</a></li>
 		<li><a href="http://127.0.0.1:8000/leogoodwinrs/">Leo Goodwin Sr. Hall</a></li>
 		<li><a href="http://127.0.0.1:8000/makors/">Mako Hall</a></li>
-		<li><a href="http://127.0.0.1:8000/rollingrs/">Rolling Hills</a></li>
+		<li><a href="http://127.0.0.1:8000/rollingrs/">Rolling Hills Graduate</a></li>
 		<li><a href="http://127.0.0.1:8000/commonsrs/">The Commons</a></li>
 		<li><a href="http://127.0.0.1:8000/vettelrs/">Vettel Apartments</a></li>
 	</ul>
