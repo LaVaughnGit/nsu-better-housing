@@ -2,10 +2,10 @@
 <html style="width:100%;height:100%;">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vettel Room Selection</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vettel Room Selection</title>
 </head>
 
 <style>
@@ -27,10 +27,16 @@
     color: #333;
   }
 </style>
+{% block content %}
 <script>
   var select = false;
   var prev;
 
+  function load(occupied) {
+    for (var i = 0; i < occupied.length; i++) {
+      document.getElementById(occupied[i]).style.fill = "red";
+    }
+  }
 
   function search() {
     var hidden = ["First Floor", "Second Floor", "Third Floor"];
@@ -44,7 +50,7 @@
     document.getElementById(floorNum).style.display = "inline";
   }
 
- function selected(num) {
+  function selected(num) {
     var roomNum = num.substring(0, num.length - 1);
     var bed = num[3];
 
@@ -69,28 +75,28 @@
 
 </script>
 
-<body style="margin:0;">
+<body style="margin:0;" onload="load({{occupiedrooms}})>
 
-  <div class="userinfo">
-    <h3>First name, Last name</h3>
-    <h2>N NUMBER</h2>
-    <label for="floor">Choose a floor</label><br>
-    <select name="floor" id="floor">
-      <option value="1" selected>First Floor</option>
-      <option value="2">Second Floor</option>
-      <option value="3">Third Floor</option>
-    </select>
-    <input type="submit" value="Search" id="search" onclick="search()">
+  <div class=" userinfo">
+  <h3>{{ firstname }}, {{ lastname }}</h3>
+  <h2>{{ nnumber }}</h2>
+  <label for="floor">Choose a floor</label><br>
+  <select name="floor" id="floor">
+    <option value="1" selected>First Floor</option>
+    <option value="2">Second Floor</option>
+    <option value="3">Third Floor</option>
+  </select>
+  <input type="submit" value="Search" id="search" onclick="search()">
 
 
-    <hr>
-    <h3>Current Selection</h3>
-    <form action="../reviewpage/" method="post">
-      {% csrf_token %}
-      <input type="text" value="" id="R" name="R">
-      <input type="text" value="" name="B" id="B"><br>
-      <input type="submit" value="Submit">
-    </form>
+  <hr>
+  <h3>Current Selection</h3>
+  <form action="../reviewpage/" method="post">
+    {% csrf_token %}
+    <input type="text" value="" id="R" name="R">
+    <input type="text" value="" name="B" id="B"><br>
+    <input type="submit" value="Submit">
+  </form>
   </div>
 
   <div class="First Floor" id="First Floor">
@@ -118,7 +124,7 @@
       <polygon id="101A" points="30,40 90,40 90,130 30,130" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
       <!--RM 102-->
-        <!--102A-->
+      <!--102A-->
       <polygon id="102A" points="30,510 90,510 90,600 30,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
       <!--102B-->
@@ -132,7 +138,7 @@
       <!--104A-->
       <polygon id="104A" points="262,510 322,510 322,600 262,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-        <!--104B-->
+      <!--104B-->
       <polygon id="104B" points="494,510 434,510 434,600 494,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
       <!--RM 105-->
@@ -145,7 +151,7 @@
       <!--106A-->
       <polygon id="106A" points="494,510 554,510 554,600 494,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-        <!--106B-->
+      <!--106B-->
       <polygon id="106B" points="726,510 666,510 666,600 726,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
 
@@ -158,7 +164,7 @@
       <!--108A-->
       <polygon id="108A" points="726,510 786,510 786,600 726,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-        <!--108B-->
+      <!--108B-->
       <polygon id="108B" points="958,510 898,510 898,600 958,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
 
@@ -194,7 +200,7 @@
   </div>
 
   <div class="Second Floor" id="Second Floor" style="display:none;">
-        <svg height="700" width="1500">
+    <svg height="700" width="1500">
       <!--VFF building outline-->
       <polygon points="30,40 1190,40 1190,600 30,600" style="fill:lightgrey;stroke:black;stroke-width:2" />
 
@@ -218,7 +224,7 @@
       <polygon id="201A" points="30,40 90,40 90,130 30,130" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
       <!--RM 102-->
-        <!--102A-->
+      <!--102A-->
       <polygon id="202A" points="30,510 90,510 90,600 30,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
       <!--102B-->
@@ -232,7 +238,7 @@
       <!--104A-->
       <polygon id="204A" points="262,510 322,510 322,600 262,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-        <!--104B-->
+      <!--104B-->
       <polygon id="204B" points="494,510 434,510 434,600 494,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
       <!--RM 105-->
@@ -245,7 +251,7 @@
       <!--106A-->
       <polygon id="206A" points="494,510 554,510 554,600 494,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-        <!--106B-->
+      <!--106B-->
       <polygon id="206B" points="726,510 666,510 666,600 726,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
 
@@ -258,7 +264,7 @@
       <!--108A-->
       <polygon id="208A" points="726,510 786,510 786,600 726,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-        <!--108B-->
+      <!--108B-->
       <polygon id="208B" points="958,510 898,510 898,600 958,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
 
@@ -292,7 +298,7 @@
   </div>
 
   <div class="Third Floor" id="Third Floor" style="display:none;">
-        <svg height="700" width="1500">
+    <svg height="700" width="1500">
       <!--VFF building outline-->
       <polygon points="30,40 1190,40 1190,600 30,600" style="fill:lightgrey;stroke:black;stroke-width:2" />
 
@@ -316,7 +322,7 @@
       <polygon id="301A" points="30,40 90,40 90,130 30,130" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
       <!--RM 102-->
-        <!--102A-->
+      <!--102A-->
       <polygon id="302A" points="30,510 90,510 90,600 30,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
       <!--102B-->
@@ -330,7 +336,7 @@
       <!--104A-->
       <polygon id="304A" points="262,510 322,510 322,600 262,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-        <!--104B-->
+      <!--104B-->
       <polygon id="304B" points="494,510 434,510 434,600 494,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
       <!--RM 105-->
@@ -343,7 +349,7 @@
       <!--106A-->
       <polygon id="306A" points="494,510 554,510 554,600 494,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-        <!--106B-->
+      <!--106B-->
       <polygon id="306B" points="726,510 666,510 666,600 726,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
 
@@ -356,7 +362,7 @@
       <!--108A-->
       <polygon id="308A" points="726,510 786,510 786,600 726,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-        <!--108B-->
+      <!--108B-->
       <polygon id="308B" points="958,510 898,510 898,600 958,600" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
 
@@ -394,6 +400,6 @@
   </div>
 
 </body>
-
+{% endblock %}
 
 </html>
