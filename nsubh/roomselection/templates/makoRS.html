@@ -31,13 +31,14 @@
   var select = false;
   var prev;
 
+  //when page is first loaded with fetch all occupied rooms and change the color to red
   function load(occupied){
     for(var i = 0; i < occupied.length; i++){
       document.getElementById(occupied[i]).style.fill = "red";
     }
   }
 
-
+//when search button is clicked will make current div hidden and change chosen div to inline
   function search() {
     var hidden = ["First Floor", "Second Floor", "Third Floor", "Fourth Floor", "Fifth Floor", "Sixth Floor", "Seventh Floor"];
     var e = document.getElementById("floor");
@@ -50,6 +51,8 @@
     document.getElementById(floorNum).style.display = "inline";
   }
 
+//when a bed is selected the color will change from green to blue, and room/bed number will be displayed
+//if the chosen bed is selected will return and nothing changes
   function selected(num) {
     var roomNum = num.substring(0, num.length - 1);
     var bed = num[3];
@@ -2498,314 +2501,265 @@
 
       <!--Mako beds-->
       <!--Left wing-->
-      <!--RM 301-->
-      <!--201A-->
+
+      <!--RM 601-->
       <polygon id="601A" points="250,680 250,635 220,635 220,680" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--201B-->
       <polygon id="601B" points="220,660 220,615 195,615 195,660" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 202-->
-      <!--202A-->
+
+      <!--RM 602-->
       <polygon id="602A" points="275,485 275,530 250,530 250,485" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 203-->
-      <!--203A-->
+
+      <!--RM 603-->
       <polygon id="603A" points="195,485 195,530 170,530 170,485" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 204-->
-      <!--204A-->
+
+      <!--RM 604-->
       <polygon id="604A" points="195,635 195,680 170,680 170,635" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 206-->
-      <!--206A-->
+
+      <!--RM 606-->
       <polygon id="606A" points="115,680 115,635 90,635 90,680" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 208-->
-      <!--208A-->
+
+      <!--RM 608-->
       <polygon id="608A" points="60,660 60,635 10,635 10,660" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--208B-->
       <polygon id="608B" points="10,635 35,635 35,595 10,595" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--208C-->
       <polygon id="608C" points="10,550 35,550 35,510 10,510" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--208D-->
       <polygon id="608D" points="10,510 10,485 60,485 60,510" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 211-->
-      <!--211A-->
+
+      <!--RM 611-->
       <polygon id="611A" points="140,315 195,315 195,335 140,335" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--211B-->
       <polygon id="611B" points="170,335 195,335 195,380 170,380" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--211C-->
       <polygon id="611C" points="195,420 195,460 170,460 170,420" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--211D-->
       <polygon id="611D" points="195,460 195,485 140,485 140,460" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 212-->
-      <!--212A-->
+
+      <!--RM 612-->
       <polygon id="612A" points="10,485 60,485 60,465 10,465" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--212B-->
       <polygon id="612B" points="10,465 35,465 35,420 10,420" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--212C-->
       <polygon id="612C" points="10,380 35,380 35,335 10,335" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--212D-->
       <polygon id="612D" points="10,335 10,315 60,315 60,335" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 213-->
-      <!--213A-->
+
+      <!--RM 613-->
       <polygon id="613A" points="140,315 140,293 195,293 195,315" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 214-->
-      <!--214A-->
+
+      <!--RM 614-->
       <polygon id="614A" points="60,315 60,290 10,290 10,315" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--214B-->
       <polygon id="614B" points="10,290 35,290 35,250 10,250" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--214C-->
       <polygon id="614C" points="10,205 35,205 35,165 10,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--214D-->
       <polygon id="614D" points="60,140 60,165 10,165 10,140" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 215-->
-      <!--215A-->
+
+      <!--RM 615-->
       <polygon id="615A" points="140,270 140,250 195,250 195,270" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--215B-->
       <polygon id="615B" points="195,250 170,250 170,210 195,210" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 218-->
-      <!--218A-->
+
+      <!--RM 618-->
       <polygon id="618A" points="60,100 60,120 10,120 10,100" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 219-->
-      <!--219A-->
+
+      <!--RM 619-->
       <polygon id="619A" points="30,80 60,80 60,40 30,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--219B-->
       <polygon id="619B" points="60,40 60,60 115,60 115,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--219C-->
       <polygon id="619C" points="140,40 140,60 195,60 195,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--219D-->
       <polygon id="619D" points="195,40 195,80 220,80 220,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 221-->
-      <!--221A-->
+
+      <!--RM 621-->
       <polygon id="621A" points="250,40 250,60 300,60 300,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--221B-->
       <polygon id="621B" points="300,40 300,80 330,80 330,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 222-->
-      <!--222A-->
+
+      <!--RM 622-->
       <polygon id="622A" points="270,205 270,185 220,185 220,205" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--222B-->
       <polygon id="622B" points="220,185 195,185 195,145 220,145" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 223-->
-      <!--223A-->
+
+      <!--RM 623-->
       <polygon id="623A" points="380,40 380,80 355,80 355,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 224-->
-      <!--224A-->
+
+      <!--RM 624-->
       <polygon id="624A" points="460,165 460,205 435,205 435,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--224B-->
       <polygon id="624B" points="435,185 435,230 410,230 410,185" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--224C-->
       <polygon id="624C" points="355,185 355,230 330,230 330,185" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--224D-->
       <polygon id="624D" points="330,165 330,205 300,205 300,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 225-->
-      <!--225A-->
+
+      <!--RM 625-->
       <polygon id="625A" points="430,40 430,80 405,80 405,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 226-->
-      <!--226A-->
+
+      <!--RM 626-->
       <polygon id="626A" points="465,40 490,40 490,80 465,80" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--226B-->
       <polygon id="626B" points="490,60 515,60 515,100 490,100" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 328-->
-      <!--328A-->
+
+      <!--RM 628-->
       <polygon id="628A" points="490,230 515,230 515,185 490,185" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--226B-->
       <polygon id="628B" points="460,165 460,205 490,205 490,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
 
 
       <!--Right wing-->
-      <!--RM 331-->
-      <!--331A-->
+
+      <!--RM 631-->
       <polygon id="631A" points="745,165 745,205 715,205 715,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--331B-->
       <polygon id="631B" points="775,185 775,140 745,140 745,185" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 235-->
-      <!--235A-->
+
+      <!--RM 633-->
       <polygon id="633A" points="740,40 740,80 710,80 710,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--235B-->
       <polygon id="633B" points="710,60 710,100 680,100 680,60" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 334-->
-      <!--334A-->
+
+      <!--RM 634-->
       <polygon id="634A" points="920,140 920,185 895,185 895,140" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--334B-->
       <polygon id="634B" points="895,165 895,205 865,205 865,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--334C-->
       <polygon id="634C" points="830,205 830,165 800,165 800,205" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--334D-->
       <polygon id="634D" points="800,140 800,185 775,185 775,140" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 335-->
-      <!--335A-->
+
+      <!--RM 635-->
       <polygon id="635A" points="775,40 805,40 805,80 775,80" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 336-->
-      <!--336A-->
+
+      <!--RM 636-->
       <polygon id="636A" points="830,40 830,80 860,80 860,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 337-->
-      <!--337A-->
+
+      <!--RM 637-->
       <polygon id="637A" points="980,165 950,165 950,205 980,205" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--337B-->
       <polygon id="637B" points="1010,140 980,140 980,185 1010,185" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 338-->
-      <!--338A-->
+
+      <!--RM 638-->
       <polygon id="638A" points="920,15 920,60 950,60 950,15" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--338B-->
       <polygon id="638B" points="890,40 920,40 920,80 890,80" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 340-->
-      <!--340A-->
+
+      <!--RM 640-->
       <polygon id="640A" points="980,40 980,80 1000,80 1000,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--340B-->
       <polygon id="640B" points="1000,15 1030,15 1030,60 1000,60" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--340C-->
       <polygon id="640C" points="1100,15 1100,60 1070,60 1070,15" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--340D-->
       <polygon id="640D" points="1130,40 1130,80 1100,80 1100,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 343-->
-      <!--343A-->
+
+      <!--RM 643-->
       <polygon id="643A" points="1190,100 1190,125 1145,125 1145,100" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 345-->
-      <!--345A-->
+
+      <!--RM 645-->
       <polygon id="645A" points="1190,145 1190,170 1145,170 1145,145" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 346-->
-      <!--346A-->
+
+      <!--RM 646-->
       <polygon id="646A" points="950,230 1010,230 1010,250 950,250" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--346B-->
       <polygon id="646B" points="980,250 1040,250 1040,270 980,270" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 347-->
-      <!--347A-->
+
+      <!--RM 647-->
       <polygon id="647A" points="1130,185 1190,185 1190,205 1130,205" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--347B-->
       <polygon id="647B" points="1160,205 1190,205 1190,250 1160,250" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--347C-->
       <polygon id="647C" points="1160,270 1160,310 1190,310 1190,270" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--347D-->
       <polygon id="647D" points="1190,335 1190,310 1135,310 1135,335" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 348-->
-      <!--348A-->
+
+      <!--RM 648-->
       <polygon id="648A" points="1010,270 1010,290 950,290 950,270" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 349-->
-      <!--349A-->
+
+      <!--RM 649-->
       <polygon id="649A" points="1040,460 1040,440 980,440 980,460" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--251B-->
       <polygon id="649B" points="1010,440 1010,420 950,420 950,440" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--251C-->
       <polygon id="649C" points="950,355 950,380 1010,380 1010,355" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--251D-->
       <polygon id="649D" points="1040,335 1040,355 980,354 980,335" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 350-->
-      <!--350A-->
+
+      <!--RM 650-->
       <polygon id="650A" points="1135,335 1190,335 1190,360 1135,360" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--350B-->
       <polygon id="650B" points="1160,360 1190,360 1190,400 1160,400" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--350C-->
       <polygon id="650C" points="1160,420 1190,420 1190,460 1160,460" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--350D-->
       <polygon id="650D" points="1190,460 1190,485 1130,485 1130,460" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 353-->
-      <!--353A-->
+
+      <!--RM 653-->
       <polygon id="653A" points="1130,485 1190,485 1190,505 1130,505" onclick="selected(id)"
-        style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--353B-->
+        style="fill:limegreen;stroke:black;stroke-width:2" />>
       <polygon id="653B" points="1190,505 1190,550 1160,550 1160,505" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--353C-->
       <polygon id="653C" points="1160,570 1190,570 1190,610 1160,610" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--353D-->
       <polygon id="653D" points="1190,610 1190,630 1130,630 1130,610" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 358-->
-      <!--358A-->
+
+      <!--RM 658-->
       <polygon id="658A" points="950,460 980,460 980,505 950,505" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 359-->
-      <!--359A-->
+
+      <!--RM 659-->
       <polygon id="659A" points="860,460 890,460 890,505 860,505" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 355-->
       <polygon id="655A" points="1100,630 1100,680 1070,680 1070,630" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 357-->
-      <!--357A-->
+
+      <!--RM 657-->
       <polygon id="657A" points="1010,630 1010,680 980,680 980,630" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 360-->
-      <!--360A-->
+
+      <!--RM 660-->
       <polygon id="660A" points="950,630 950,680 920,680 920,630" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--360B-->
       <polygon id="660B" points="980,610 980,660 950,660 950,610" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
     </svg>
@@ -2834,441 +2788,394 @@
       <!--Mako Room outlines-->
       <!--starting from bottom left following through to bottom right-->
 
-      <!--RM 101-->
+      <!--RM 701-->
       <polyline points="275,680 275,595 195,595 195,660" style="fill:none;stroke:black;stroke-width:2" />
       <text x="235" y="620" style="font:15px sans-serif;">701</text>
-      <!--RM 102-->
+      <!--RM 702-->
       <polyline points="275,485 275,570 220,570 220,485" style="fill:none;stroke:black;stroke-width:2" />
       <text x="235" y="555" style="font:15px sans-serif;">702</text>
-      <!--RM 103-->
+      <!--RM 703-->
       <polyline points="195,485 195,570 140,570 140,485 195,485" style="fill:none;stroke:black;stroke-width:2" />
       <text x="155" y="555" style="font:15px sans-serif;">703</text>
-      <!--RM 104-->
+      <!--RM 704-->
       <polyline points="195,595 140,595 140,680" style="fill:none;stroke:black;stroke-width:2" />
       <text x="155" y="620" style="font:15px sans-serif;">704</text>
-      <!--RM 106-->
+      <!--RM 706-->
       <polyline points="140,595 90,595" style="fill:none;stroke:black;stroke-width:2" />
       <text x="102" y="620" style="font:15px sans-serif;">706</text>
-      <!--RM 108-->
+      <!--RM 708-->
       <polyline points="90,660 90,485 10,485" style="fill:none;stroke:black;stroke-width:2" />
       <text x="60" y="580" style="font:15px sans-serif;">708</text>
-      <!--RM 111-->
+      <!--RM 711-->
       <polyline points="140,485 114,485 115,315 195,315" style="fill:none;stroke:black;stroke-width:2" />
       <text x="120" y="405" style="font:15px sans-serif;">711</text>
-      <!--RM 112-->
+      <!--RM 712-->
       <polyline points="90,485 90,315 10,315" style="fill:none;stroke:black;stroke-width:2" />
       <text x="60" y="405" style="font:15px sans-serif;">712</text>
-      <!--RM 113-->
+      <!--RM 713-->
       <polyline points="115,315 115,270 195,270" style="fill:none;stroke:black;stroke-width:2" />
       <text x="120" y="288" style="font:15px sans-serif;">713</text>
-      <!--RM 114-->
+      <!--RM 714-->
       <polyline points="90,315 90,140 10,140" style="fill:none;stroke:black;stroke-width:2" />
       <text x="60" y="235" style="font:15px sans-serif;">714</text>
-      <!--RM 115-->
+      <!--RM 715-->
       <polyline points="115,270 115,185 195,185" style="fill:none;stroke:black;stroke-width:2" />
       <text x="120" y="235" style="font:15px sans-serif;">715</text>
-      <!--RM 118-->
+      <!--RM 718-->
       <polyline points="90,140 90,100" style="fill:none;stroke:black;stroke-width:2" />
       <text x="60" y="135" style="font:15px sans-serif;">718</text>
-      <!--RM 119-->
+      <!--RM 719-->
       <polyline points="30,100 220,100 220,40" style="fill:none;stroke:black;stroke-width:2" />
       <text x="115" y="95" style="font:15px sans-serif;">719</text>
-      <!--RM 121-->
+      <!--RM 721-->
       <polyline points="220,100 330,100 330,40" style="fill:none;stroke:black;stroke-width:2" />
       <text x="260" y="95" style="font:15px sans-serif;">721</text>
-      <!--RM 122-->
+      <!--RM 722-->
       <polyline points="195,185 195,120 300,120 300,205" style="fill:none;stroke:black;stroke-width:2" />
       <text x="240" y="135" style="font:15px sans-serif;">722</text>
-      <!--RM 123-->
+      <!--RM 723-->
       <polyline points="330,100 380,100 380,40" style="fill:none;stroke:black;stroke-width:2" />
       <text x="340" y="95" style="font:15px sans-serif;">723</text>
-      <!--RM 124-->
+      <!--RM 724-->
       <polyline points="300,120 460,120 460,205" style="fill:none;stroke:black;stroke-width:2" />
       <text x="370" y="135" style="font:15px sans-serif;">724</text>
-      <!--RM 125-->
+      <!--RM 725-->
       <polyline points="380,100 430,100 430,40" style="fill:none;stroke:black;stroke-width:2" />
       <text x="395" y="95" style="font:15px sans-serif;">725</text>
-      <!--RM 126-->
+      <!--RM 726-->
       <polyline points="430,100 515,100 515,60" style="fill:none;stroke:black;stroke-width:2" />
       <text x="445" y="95" style="font:15px sans-serif;">726</text>
-      <!--RM 328-->
+      <!--RM 728-->
       <polyline points="460,120 540,120 540,230 490,230" style="fill:none;stroke:black;stroke-width:2" />
       <text x="490" y="135" style="font:15px sans-serif;">728</text>
 
-      <!--RM 331-->
+      <!--RM 731-->
       <polyline points="775,120 650,120 650,205 715,205" style="fill:none;stroke:black;stroke-width:2" />
       <text x="700" y="135" style="font:15px sans-serif;">731</text>
-      <!--RM 143-->
+      <!--RM 743-->
       <polyline points="680,60 680,100 775,100 775,40" style="fill:none;stroke:black;stroke-width:2" />
       <text x="735" y="95" style="font:15px sans-serif;">733</text>
-      <!--RM 144-->
+      <!--RM 744-->
       <polyline points="775,185 775,120 920,120 920,185" style="fill:none;stroke:black;stroke-width:2" />
       <text x="835" y="135" style="font:15px sans-serif;">734</text>
-      <!--RM 145-->
+      <!--RM 745-->
       <polyline points="775,100 830,100 830,40" style="fill:none;stroke:black;stroke-width:2" />
       <text x="795" y="95" style="font:15px sans-serif;">735</text>
-      <!--RM 146-->
+      <!--RM 746-->
       <polyline points="830,100 890,100 890,40" style="fill:none;stroke:black;stroke-width:2" />
       <text x="850" y="95" style="font:15px sans-serif;">736</text>
-      <!--RM 147-->
+      <!--RM 747-->
       <polyline points="920,120 1010,120 1010,185 980,185" style="fill:none;stroke:black;stroke-width:2" />
       <text x="950" y="135" style="font:15px sans-serif;">737</text>
-      <!--RM 148-->
+      <!--RM 748-->
       <polyline points="890,100 980,100 980,15" style="fill:none;stroke:black;stroke-width:2" />
       <text x="925" y="95" style="font:15px sans-serif;">738</text>
-      <!--RM 150-->
+      <!--RM 750-->
       <polyline points="980,100 1130,100" style="fill:none;stroke:black;stroke-width:2" />
       <text x="1037" y="95" style="font:15px sans-serif;">740</text>
-      <!--RM 152-->
+      <!--RM 752-->
       <polyline points="1100,100 1100,145 1190,145" style="fill:none;stroke:black;stroke-width:2" />
       <text x="1103" y="130" style="font:15px sans-serif;">743</text>
-      <!--RM 155-->
+      <!--RM 755-->
       <polyline points="1100,145 1100,185 1190,185" style="fill:none;stroke:black;stroke-width:2" />
       <text x="1103" y="170" style="font:15px sans-serif;">745</text>
-      <!--RM 156-->
+      <!--RM 756-->
       <polyline points="950,205 1070,205 1070,270 980,270" style="fill:none;stroke:black;stroke-width:2" />
       <text x="1040" y="240" style="font:15px sans-serif;">746</text>
-      <!--RM 157-->
+      <!--RM 757-->
       <polyline points="1100,185 1100,335 1190,335" style="fill:none;stroke:black;stroke-width:2" />
       <text x="1103" y="265" style="font:15px sans-serif;">747</text>
-      <!--RM 158-->
+      <!--RM 758-->
       <polyline points="1070,270 1070,335 950,335" style="fill:none;stroke:black;stroke-width:2" />
       <text x="1040" y="310" style="font:15px sans-serif;">748</text>
-      <!--RM 159-->
+      <!--RM 759-->
       <polyline points="1070,335 1070,460 980,460" style="fill:none;stroke:black;stroke-width:2" />
       <text x="1040" y="405" style="font:15px sans-serif;">749</text>
-      <!--RM 160-->
+      <!--RM 760-->
       <polyline points="1100,335 1100,485 1190,485" style="fill:none;stroke:black;stroke-width:2" />
       <text x="1103" y="415" style="font:15px sans-serif;">750</text>
-      <!--RM 167-->
+      <!--RM 767-->
       <polyline points="1015,460 1015,570 950,570 950,460" style="fill:none;stroke:black;stroke-width:2" />
       <text x="970" y="565" style="font:15px sans-serif;">758</text>
-      <!--RM 168-->
+      <!--RM 768-->
       <polyline points="920,460 920,570 860,570 860,460" style="fill:none;stroke:black;stroke-width:2" />
       <text x="876" y="565" style="font:15px sans-serif;">759</text>
-      <!--RM 255-->
+      <!--RM 755-->
       <polyline points="1100,485 1100,630 1190,630" style="fill:none;stroke:black;stroke-width:2" />
       <text x="1103" y="570" style="font:15px sans-serif;">753</text>
-      <!--RM 257-->
+      <!--RM 757-->
       <polyline points="1100,680 1100,590 1040,590 1040,680" style="fill:none;stroke:black;stroke-width:2" />
       <text x="1060" y="610" style="font:15px sans-serif;">755</text>
-      <!--RM 259-->
+      <!--RM 759-->
       <polyline points="1040,590 980,590 980,680" style="fill:none;stroke:black;stroke-width:2" />
       <text x="1000" y="610" style="font:15px sans-serif;">757</text>
-      <!--RM 262-->
+      <!--RM 762-->
       <polyline points="980,590 860,590 860,680" style="fill:none;stroke:black;stroke-width:2" />
       <text x="900" y="610" style="font:15px sans-serif;">760</text>
 
       <!--Mako beds-->
+
       <!--Left wing-->
-      <!--RM 301-->
-      <!--201A-->
+
+      <!--RM 701-->
       <polygon id="701A" points="250,680 250,635 220,635 220,680" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--201B-->
       <polygon id="701B" points="220,660 220,615 195,615 195,660" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 202-->
-      <!--202A-->
+
+      <!--RM 702-->
       <polygon id="702A" points="275,485 275,530 250,530 250,485" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 203-->
-      <!--203A-->
+
+      <!--RM 703-->
       <polygon id="703A" points="195,485 195,530 170,530 170,485" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 204-->
-      <!--204A-->
+
+      <!--RM 704-->
       <polygon id="704A" points="195,635 195,680 170,680 170,635" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 206-->
-      <!--206A-->
+
+      <!--RM 706-->
       <polygon id="706A" points="115,680 115,635 90,635 90,680" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 208-->
-      <!--208A-->
+
+      <!--RM 708-->
       <polygon id="708A" points="60,660 60,635 10,635 10,660" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--208B-->
       <polygon id="708B" points="10,635 35,635 35,595 10,595" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--208C-->
       <polygon id="708C" points="10,550 35,550 35,510 10,510" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--208D-->
       <polygon id="708D" points="10,510 10,485 60,485 60,510" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 211-->
-      <!--211A-->
+
+      <!--RM 711-->
       <polygon id="711A" points="140,315 195,315 195,335 140,335" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--211B-->
       <polygon id="711B" points="170,335 195,335 195,380 170,380" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--211C-->
       <polygon id="711C" points="195,420 195,460 170,460 170,420" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--211D-->
       <polygon id="711D" points="195,460 195,485 140,485 140,460" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 212-->
-      <!--212A-->
+
+      <!--RM 712-->
       <polygon id="712A" points="10,485 60,485 60,465 10,465" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--212B-->
       <polygon id="712B" points="10,465 35,465 35,420 10,420" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--212C-->
       <polygon id="712C" points="10,380 35,380 35,335 10,335" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--212D-->
       <polygon id="712D" points="10,335 10,315 60,315 60,335" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 213-->
-      <!--213A-->
+
+      <!--RM 713-->
       <polygon id="713A" points="140,315 140,293 195,293 195,315" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 214-->
-      <!--214A-->
+
+      <!--RM 714-->
       <polygon id="714A" points="60,315 60,290 10,290 10,315" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--214B-->
       <polygon id="714B" points="10,290 35,290 35,250 10,250" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--214C-->
       <polygon id="714C" points="10,205 35,205 35,165 10,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--214D-->
       <polygon id="714D" points="60,140 60,165 10,165 10,140" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 215-->
-      <!--215A-->
+
+      <!--RM 715-->
       <polygon id="715A" points="140,270 140,250 195,250 195,270" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--215B-->
       <polygon id="715B" points="195,250 170,250 170,210 195,210" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 218-->
-      <!--218A-->
+
+      <!--RM 718-->
       <polygon id="718A" points="60,100 60,120 10,120 10,100" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 219-->
-      <!--219A-->
+
+      <!--RM 719-->
       <polygon id="719A" points="30,80 60,80 60,40 30,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--219B-->
       <polygon id="719B" points="60,40 60,60 115,60 115,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--219C-->
       <polygon id="719C" points="140,40 140,60 195,60 195,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--219D-->
       <polygon id="719D" points="195,40 195,80 220,80 220,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 221-->
-      <!--221A-->
+
+      <!--RM 721-->
       <polygon id="721A" points="250,40 250,60 300,60 300,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--221B-->
       <polygon id="721B" points="300,40 300,80 330,80 330,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 222-->
-      <!--222A-->
+
+      <!--RM 722-->
       <polygon id="722A" points="270,205 270,185 220,185 220,205" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--222B-->
       <polygon id="722B" points="220,185 195,185 195,145 220,145" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 223-->
-      <!--223A-->
+
+      <!--RM 723-->
       <polygon id="723A" points="380,40 380,80 355,80 355,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 224-->
-      <!--224A-->
+
+      <!--RM 724-->
       <polygon id="724A" points="460,165 460,205 435,205 435,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--224B-->
       <polygon id="724B" points="435,185 435,230 410,230 410,185" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--224C-->
       <polygon id="724C" points="355,185 355,230 330,230 330,185" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--224D-->
       <polygon id="724D" points="330,165 330,205 300,205 300,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 225-->
-      <!--225A-->
+
+      <!--RM 725-->
       <polygon id="725A" points="430,40 430,80 405,80 405,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 226-->
-      <!--226A-->
+
+      <!--RM 726-->
       <polygon id="726A" points="465,40 490,40 490,80 465,80" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--226B-->
       <polygon id="726B" points="490,60 515,60 515,100 490,100" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 328-->
-      <!--328A-->
+
+      <!--RM 728-->
       <polygon id="728A" points="490,230 515,230 515,185 490,185" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--226B-->
       <polygon id="728B" points="460,165 460,205 490,205 490,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
 
 
       <!--Right wing-->
-      <!--RM 331-->
-      <!--331A-->
+      <!--RM 731-->
       <polygon id="731A" points="745,165 745,205 715,205 715,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--331B-->
       <polygon id="731B" points="775,185 775,140 745,140 745,185" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 235-->
-      <!--235A-->
+
+      <!--RM 735-->
       <polygon id="733A" points="740,40 740,80 710,80 710,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--235B-->
       <polygon id="733B" points="710,60 710,100 680,100 680,60" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 334-->
-      <!--334A-->
+
+      <!--RM 734-->
       <polygon id="734A" points="920,140 920,185 895,185 895,140" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--334B-->
       <polygon id="734B" points="895,165 895,205 865,205 865,165" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--334C-->
       <polygon id="734C" points="830,205 830,165 800,165 800,205" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--334D-->
       <polygon id="734D" points="800,140 800,185 775,185 775,140" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 335-->
-      <!--335A-->
+
+      <!--RM 735-->
       <polygon id="735A" points="775,40 805,40 805,80 775,80" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 336-->
-      <!--336A-->
+
+      <!--RM 736-->
       <polygon id="736A" points="830,40 830,80 860,80 860,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 337-->
-      <!--337A-->
+
+      <!--RM 737-->
       <polygon id="737A" points="980,165 950,165 950,205 980,205" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--337B-->
       <polygon id="737B" points="1010,140 980,140 980,185 1010,185" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 338-->
-      <!--338A-->
+
+      <!--RM 738-->
       <polygon id="738A" points="920,15 920,60 950,60 950,15" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--338B-->
       <polygon id="738B" points="890,40 920,40 920,80 890,80" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 340-->
-      <!--340A-->
+
+      <!--RM 740-->
       <polygon id="740A" points="980,40 980,80 1000,80 1000,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--340B-->
       <polygon id="740B" points="1000,15 1030,15 1030,60 1000,60" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--340C-->
       <polygon id="740C" points="1100,15 1100,60 1070,60 1070,15" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--340D-->
       <polygon id="740D" points="1130,40 1130,80 1100,80 1100,40" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 343-->
-      <!--343A-->
+
+      <!--RM 743-->
       <polygon id="743A" points="1190,100 1190,125 1145,125 1145,100" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 345-->
-      <!--345A-->
+
+      <!--RM 745-->
       <polygon id="745A" points="1190,145 1190,170 1145,170 1145,145" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 346-->
-      <!--346A-->
+
+      <!--RM 746-->
       <polygon id="746A" points="950,230 1010,230 1010,250 950,250" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--346B-->
       <polygon id="746B" points="980,250 1040,250 1040,270 980,270" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 347-->
-      <!--347A-->
+
+      <!--RM 747-->
       <polygon id="747A" points="1130,185 1190,185 1190,205 1130,205" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--347B-->
       <polygon id="747B" points="1160,205 1190,205 1190,250 1160,250" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--347C-->
       <polygon id="747C" points="1160,270 1160,310 1190,310 1190,270" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--347D-->
       <polygon id="747D" points="1190,335 1190,310 1135,310 1135,335" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 348-->
-      <!--348A-->
+
+      <!--RM 748-->
       <polygon id="748A" points="1010,270 1010,290 950,290 950,270" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 349-->
-      <!--349A-->
+
+      <!--RM 749-->
       <polygon id="749A" points="1040,460 1040,440 980,440 980,460" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--251B-->
       <polygon id="749B" points="1010,440 1010,420 950,420 950,440" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--251C-->
       <polygon id="749C" points="950,355 950,380 1010,380 1010,355" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--251D-->
       <polygon id="749D" points="1040,335 1040,355 980,354 980,335" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 350-->
-      <!--350A-->
+
+      <!--RM 750-->
       <polygon id="750A" points="1135,335 1190,335 1190,360 1135,360" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--350B-->
       <polygon id="750B" points="1160,360 1190,360 1190,400 1160,400" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--350C-->
       <polygon id="750C" points="1160,420 1190,420 1190,460 1160,460" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--350D-->
       <polygon id="750D" points="1190,460 1190,485 1130,485 1130,460" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 353-->
-      <!--353A-->
+
+      <!--RM 753-->
       <polygon id="753A" points="1130,485 1190,485 1190,505 1130,505" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--353B-->
       <polygon id="753B" points="1190,505 1190,550 1160,550 1160,505" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--353C-->
       <polygon id="753C" points="1160,570 1190,570 1190,610 1160,610" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--353D-->
       <polygon id="753D" points="1190,610 1190,630 1130,630 1130,610" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 358-->
-      <!--358A-->
+
+      <!--RM 758-->
       <polygon id="758A" points="950,460 980,460 980,505 950,505" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 359-->
-      <!--359A-->
+
+      <!--RM 759-->
       <polygon id="759A" points="860,460 890,460 890,505 860,505" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 355-->
+
+      <!--RM 755-->
       <polygon id="755A" points="1100,630 1100,680 1070,680 1070,630" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 357-->
-      <!--357A-->
+
+      <!--RM 757-->
       <polygon id="757A" points="1010,630 1010,680 980,680 980,630" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--RM 360-->
-      <!--360A-->
+
+      <!--RM 760-->
       <polygon id="760A" points="950,630 950,680 920,680 920,630" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
-      <!--360B-->
       <polygon id="760B" points="980,610 980,660 950,660 950,610" onclick="selected(id)"
         style="fill:limegreen;stroke:black;stroke-width:2" />
     </svg>
