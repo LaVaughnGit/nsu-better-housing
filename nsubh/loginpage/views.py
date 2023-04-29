@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from pymongo import MongoClient
 from homepage import views
 
+# Establish connnection to database
 client = MongoClient("mongodb://localhost:27017")
 nsubh = client["NSUBH"]
 
@@ -13,11 +14,12 @@ nNumberStored = ''
 
 loginInfo = {}
 
+# Load the loginpage for NSUBH
+
 
 @csrf_exempt
 def loginpage(request):
     # Check the request method
-
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -27,6 +29,7 @@ def loginpage(request):
         logincollection = nsubh['Login']
         userquery = {"Username": username}
         dbUserDocument = logincollection.find_one(userquery)
+        # Find if a user exists in the database
         if dbUserDocument:
             docUser = dbUserDocument["Username"]
             docPass = dbUserDocument["Password"]
@@ -37,6 +40,7 @@ def loginpage(request):
 
         user = docUser
         passwordChecker = False
+        # Checks for incomplete username or password
         if user != username:
             error = 'Incorrect username.'
 
@@ -48,6 +52,7 @@ def loginpage(request):
         else:
             error = None
 
+        # Store login info if there is a successful login
         if error is None:
             loginInformation = {
                 'username': username,

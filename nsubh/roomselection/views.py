@@ -3,9 +3,12 @@ from django.http import HttpResponse
 from django.template import loader
 from pymongo import MongoClient
 from loginpage.views import loginpage
-# Create your views here.
+
+# Establish connection to database
 client = MongoClient("mongodb://localhost:27017")
 nsubh = client["NSUBH"]
+
+# Load Mako. Check if any beds are occupied from database collection
 
 
 def makoRS(request):
@@ -28,6 +31,8 @@ def makoRS(request):
     }
     return render(request, 'makors.html', context)
 
+# Load Commons. Check if any beds are occupied from database collection
+
 
 def commonsRS(request):
     context = {}
@@ -47,6 +52,8 @@ def commonsRS(request):
         "nnumber": loginpage.nnumber,
     }
     return render(request, 'commonsrs.html', context)
+
+# Load Leogoodwin. Check if any beds are occupied from database collection
 
 
 def leogoodwinRS(request):
@@ -68,6 +75,8 @@ def leogoodwinRS(request):
     }
     return render(request, 'leogoodwinrs.html', context)
 
+# Load Farquhar. Check if any beds are occupied from database collection
+
 
 def farquharRS(request):
     context = {}
@@ -87,6 +96,8 @@ def farquharRS(request):
         "nnumber": loginpage.nnumber,
     }
     return render(request, 'farquharrs.html', context)
+
+# Load Founders. Check if any beds are occupied from database collection
 
 
 def foundersRS(request):
@@ -108,6 +119,8 @@ def foundersRS(request):
     }
     return render(request, 'foundersrs.html', context)
 
+# Load Vettel. Check if any beds are occupied from database collection
+
 
 def vettelRS(request):
     context = {}
@@ -128,6 +141,8 @@ def vettelRS(request):
     }
     return render(request, 'vettelrs.html', context)
 
+# Load CLC. Check if any beds are occupied from database collection
+
 
 def clcRS(request):
     context = {}
@@ -147,6 +162,8 @@ def clcRS(request):
         "nnumber": loginpage.nnumber,
     }
     return render(request, 'clcrs.html', context)
+
+# Load Rolling. Check if any beds are occupied from database collection
 
 
 def rollingRS(request):

@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.utils',
     'homepage',
-    'buildingselection',
-    'thecommonsRS',
     'loginpage',
     'registrationpage',
     'reviewpage',

@@ -17,12 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from roomselection.views import makoRS, commonsRS, clcRS, leogoodwinRS, farquharRS, foundersRS, vettelRS, rollingRS
 
+# The different URLs for the website
 urlpatterns = [
     path('', include('loginpage.urls')),
     path('loginpage/', include('loginpage.urls')),
     path('homepage/', include('homepage.urls')),
-    path('buildingselection/', include('buildingselection.urls')),
-    path('thecommons/', include('thecommonsRS.urls')),
     path('register/', include('registrationpage.urls')),
     path('reviewpage/', include('reviewpage.urls')),
     path('completionpage/', include('completionpage.urls')),
