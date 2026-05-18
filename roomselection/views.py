@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from pymongo import MongoClient
 from loginpage.views import loginpage
 
-# Establish connection to database
-client = MongoClient("mongodb://localhost:27017")
-nsubh = client["NSUBH"]
+
+def _get_db():
+    from pymongo import MongoClient
+    client = MongoClient("mongodb://localhost:27017")
+    return client["NSUBH"]
 
 # Load Mako. Check if any beds are occupied from database collection
 
@@ -14,7 +15,7 @@ nsubh = client["NSUBH"]
 def makoRS(request):
     context = {}
     loginpage.building = 'MAK'
-    mkh = nsubh[loginpage.building]
+    mkh = _get_db()[loginpage.building]
     cursor = mkh.find({})
     occupiedBeds = []
     for document in cursor:
@@ -37,7 +38,7 @@ def makoRS(request):
 def commonsRS(request):
     context = {}
     loginpage.building = 'COM'
-    mkh = nsubh[loginpage.building]
+    mkh = _get_db()[loginpage.building]
     cursor = mkh.find({})
     occupiedBeds = []
     for document in cursor:
@@ -59,7 +60,7 @@ def commonsRS(request):
 def leogoodwinRS(request):
     context = {}
     loginpage.building = 'LGW'
-    mkh = nsubh[loginpage.building]
+    mkh = _get_db()[loginpage.building]
     cursor = mkh.find({})
     occupiedBeds = []
     for document in cursor:
@@ -81,7 +82,7 @@ def leogoodwinRS(request):
 def farquharRS(request):
     context = {}
     loginpage.building = 'FAR'
-    mkh = nsubh[loginpage.building]
+    mkh = _get_db()[loginpage.building]
     cursor = mkh.find({})
     occupiedBeds = []
     for document in cursor:
@@ -103,7 +104,7 @@ def farquharRS(request):
 def foundersRS(request):
     context = {}
     loginpage.building = 'FOU'
-    mkh = nsubh[loginpage.building]
+    mkh = _get_db()[loginpage.building]
     cursor = mkh.find({})
     occupiedBeds = []
     for document in cursor:
@@ -125,7 +126,7 @@ def foundersRS(request):
 def vettelRS(request):
     context = {}
     loginpage.building = 'VET'
-    mkh = nsubh[loginpage.building]
+    mkh = _get_db()[loginpage.building]
     cursor = mkh.find({})
     occupiedBeds = []
     for document in cursor:
@@ -147,7 +148,7 @@ def vettelRS(request):
 def clcRS(request):
     context = {}
     loginpage.building = 'CLC'
-    mkh = nsubh[loginpage.building]
+    mkh = _get_db()[loginpage.building]
     cursor = mkh.find({})
     occupiedBeds = []
     for document in cursor:
@@ -169,7 +170,7 @@ def clcRS(request):
 def rollingRS(request):
     context = {}
     loginpage.building = 'ROLL'
-    mkh = nsubh[loginpage.building]
+    mkh = _get_db()[loginpage.building]
     cursor = mkh.find({})
     occupiedBeds = []
     for document in cursor:
