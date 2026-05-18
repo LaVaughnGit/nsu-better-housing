@@ -19,7 +19,7 @@ from roomselection.views import makoRS, commonsRS, clcRS, leogoodwinRS, farquhar
 
 # The different URLs for the website
 urlpatterns = [
-    path('', include('loginpage.urls')),
+    path('', include('homepage.urls')),
     path('loginpage/', include('loginpage.urls')),
     path('homepage/', include('homepage.urls')),
     path('register/', include('registrationpage.urls')),
